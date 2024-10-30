@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #E2DBD4;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: #2b0f39;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CFC3C6;
+  border: 0.2rem solid #2b0f39;
+  border-radius: 1rem;
+}/*# sourceMappingURL=global.css.map */

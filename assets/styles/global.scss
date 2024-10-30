@@ -1,0 +1,27 @@
+@import "./mixins";
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $quinary-color;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb { 
+  background-color: $quartiary-color;
+  border: .2rem solid $primary-color;
+  border-radius: 1rem;
+}

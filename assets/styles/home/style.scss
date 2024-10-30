@@ -1,16 +1,60 @@
 @import "../mixins";
 @import "../variables";
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  transition: $default-transition;
 }
 
-html {
-  scroll-behavior: smooth;
+.header.visible {
+  top: 0;
+  background-color: $quartiary-color;
 }
 
-body {
-  overflow-x: hidden;
+.header.hidden {
+  top: -100%;
+}
+
+.header__container {
+  width: 100%;
+  height: 100%;
+  @include flex(row, space-around, center);
+}
+
+.title__box {
+  font: 900 1rem "Playfair Display", serif;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.list__box {
+  width: 40%;
+  height: 100%;
+  @include flex(row, center, center);
+
+  ul {
+    width: 100%;
+    list-style: none;
+    @include flex(row, space-between, center);
+
+    li {
+      cursor: pointer;
+      color: $primary-color;
+      font: 600 1rem "Open Sans", serif;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+main {
+  height: 100dvh;
+  background: url(../../img/background.png) no-repeat center center/cover;
 }
