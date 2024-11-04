@@ -26,7 +26,9 @@
 }
 
 .title__box {
-  font: 900 1rem "Playfair Display", serif;
+  font:
+    900 1rem "Playfair Display",
+    serif;
   text-transform: uppercase;
   color: $primary-color;
 }
@@ -44,17 +46,125 @@
     li {
       cursor: pointer;
       color: $primary-color;
-      font: 600 1rem "Open Sans", serif;
+      font:
+        600 1rem "Open Sans",
+        serif;
+      position: relative;
+      transition: $default-transition;
 
       a {
         color: $primary-color;
         text-decoration: none;
       }
+
+      &:hover {
+        transform: translateY(-0.2rem);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        border: 1px solid $primary-color;
+        transform: scaleX(0.05);
+        left: 0;
+        bottom: 0;
+        transition: $default-transition;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
     }
+  }
+}
+
+.actions {
+  width: 5rem;
+  @include flex(row, space-between, center);
+}
+
+.actions__cart,
+.actions__favorite {
+  img {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 }
 
 main {
   height: 100dvh;
+  min-height: auto;
+}
+
+.main__container {
+  padding: 0 0 3rem 9.7rem;
+}
+
+.main__apresentation {
+  width: 100%;
+  height: 100dvh;
+  @include flex(row, flex-start, center);
   background: url(../../img/background.png) no-repeat center center/cover;
+}
+
+.apresentation__content {
+  width: 30rem;
+  height: 50%;
+  @include flex(column, space-evenly, flex-start);
+
+  h1,
+  p {
+    text-wrap: balance;
+  }
+
+  h1 {
+    font:
+      600 2rem "Playfair Display",
+      serif;
+    color: $primary-color;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after,
+    &::before {
+      background-color: $tertiary-color;
+      opacity: 0.3;
+      content: "";
+      position: absolute;
+      height: 15%;
+      left: -2px;
+      z-index: -1;
+    }
+
+    &::after {
+      bottom: 0;
+      width: calc(100% + 6px);
+    }
+
+    &::before {
+      width: 73%;
+      top: 1.6rem;
+    }
+  }
+
+  p {
+    font:
+      500 1.2rem/1.5rem "Open Sans",
+      sans-serif;
+    color: $primary-color;
+  }
+
+  button {
+    background-color: $primary-color;
+    border: none;
+    width: 13rem;
+    height: 4rem;
+    border-radius: 4rem;
+    font:
+      500 0.9rem/1.5rem "Open Sans",
+      sans-serif;
+    color: $quinary-color;
+    filter: drop-shadow(0 0 15px $primary-color);
+    cursor: pointer;
+  }
 }

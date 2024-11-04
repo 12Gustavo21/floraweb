@@ -54,13 +54,112 @@
   cursor: pointer;
   color: #2b0f39;
   font: 600 1rem "Open Sans", serif;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .list__box ul li a {
   color: #2b0f39;
   text-decoration: none;
 }
+.list__box ul li:hover {
+  transform: translateY(-0.2rem);
+}
+.list__box ul li::after {
+  content: "";
+  display: block;
+  border: 1px solid #2b0f39;
+  transform: scaleX(0.05);
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.list__box ul li:hover::after {
+  transform: scaleX(1);
+}
+
+.actions {
+  width: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.actions__cart img,
+.actions__favorite img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
 
 main {
   height: 100dvh;
+  min-height: auto;
+}
+
+.main__container {
+  padding: 0 0 3rem 9.7rem;
+}
+
+.main__apresentation {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   background: url(../../img/background.png) no-repeat center center/cover;
+}
+
+.apresentation__content {
+  width: 30rem;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.apresentation__content h1,
+.apresentation__content p {
+  text-wrap: balance;
+}
+.apresentation__content h1 {
+  font: 600 2rem "Playfair Display", serif;
+  color: #2b0f39;
+  text-transform: uppercase;
+  position: relative;
+}
+.apresentation__content h1::after, .apresentation__content h1::before {
+  background-color: #6A5975;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  height: 15%;
+  left: -2px;
+  z-index: -1;
+}
+.apresentation__content h1::after {
+  bottom: 0;
+  width: calc(100% + 6px);
+}
+.apresentation__content h1::before {
+  width: 73%;
+  top: 1.6rem;
+}
+.apresentation__content p {
+  font: 500 1.2rem/1.5rem "Open Sans", sans-serif;
+  color: #2b0f39;
+}
+.apresentation__content button {
+  background-color: #2b0f39;
+  border: none;
+  width: 13rem;
+  height: 4rem;
+  border-radius: 4rem;
+  font: 500 0.9rem/1.5rem "Open Sans", sans-serif;
+  color: #E2DBD4;
+  filter: drop-shadow(0 0 15px #2b0f39);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
