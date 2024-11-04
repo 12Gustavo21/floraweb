@@ -132,7 +132,7 @@ main {
   position: relative;
 }
 .apresentation__content h1::after, .apresentation__content h1::before {
-  background-color: #6A5975;
+  background-color: #6a5975;
   opacity: 0.3;
   content: "";
   position: absolute;
