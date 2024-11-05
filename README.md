@@ -4,7 +4,7 @@
 
 ## Markup Language | Graduation - Challenge
 
-<img width ='800px' src ='./assets/img/home-print.jpg' />
+<img width ='800px' src ='./assets/img/home-print.ppg' />
 
 _Technologies_
 
