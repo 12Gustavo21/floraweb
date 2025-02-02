@@ -8,8 +8,15 @@
 }
 
 .header.visible {
+  width: 99%;
   top: 0;
-  background-color: #CFC3C6;
+  margin: 0.5rem 0 0 0.5rem;
+  background: rgba(226, 219, 212, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(0.3125rem);
+          backdrop-filter: blur(0.3125rem);
+  border: 0.0625rem solid rgba(226, 219, 212, 0.4);
 }
 
 .header.hidden {
@@ -26,14 +33,14 @@
   flex-wrap: wrap;
 }
 
-.title__box {
-  font: 900 1rem "Playfair Display", serif;
-  text-transform: uppercase;
-  color: #2b0f39;
+@media only screen and (width <= 850px) {
+  .header__container {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
 }
-
 .list__box {
-  width: 40%;
+  width: 45%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -49,16 +56,17 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0;
 }
 .list__box ul li {
   cursor: pointer;
-  color: #2b0f39;
+  color: #2B0F39;
   font: 600 1rem "Open Sans", serif;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
 .list__box ul li a {
-  color: #2b0f39;
+  color: #2B0F39;
   text-decoration: none;
 }
 .list__box ul li:hover {
@@ -67,8 +75,8 @@
 .list__box ul li::after {
   content: "";
   display: block;
-  border: 1px solid #2b0f39;
-  transform: scaleX(0.05);
+  border: 1px solid #2B0F39;
+  transform: scaleX(0);
   left: 0;
   bottom: 0;
   transition: all 0.3s ease-in-out;
@@ -77,6 +85,61 @@
   transform: scaleX(1);
 }
 
+@media only screen and (width <= 1300px) {
+  .list__box {
+    width: 60%;
+  }
+  .list__box ul li {
+    font-size: 0.8rem;
+  }
+}
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #2B0F39;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+@media only screen and (width <= 850px) {
+  .burger {
+    display: block;
+  }
+  .list__box {
+    display: none;
+  }
+}
 .actions {
   width: 5rem;
   display: flex;
@@ -86,6 +149,13 @@
   flex-wrap: wrap;
 }
 
+@media only screen and (width <= 850px) {
+  .actions {
+    gap: 1rem;
+    min-width: 20%;
+    width: auto;
+  }
+}
 .actions__cart img,
 .actions__favorite img {
   width: 1.7rem;
@@ -97,10 +167,17 @@ main {
   min-height: auto;
 }
 
-.main__container {
-  padding: 0 0 3rem 9.7rem;
+.main__apresentation,
+.main__why__floraweb {
+  padding-left: 6.7vw;
 }
 
+@media only screen and (width <= 1300px) {
+  .main__apresentation,
+  .main__why__floraweb {
+    padding-left: 4vw;
+  }
+}
 .main__apresentation {
   width: 100%;
   height: 100dvh;
@@ -113,7 +190,7 @@ main {
 }
 
 .apresentation__content {
-  width: 30rem;
+  width: 35rem;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -121,45 +198,141 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.apresentation__content h1,
-.apresentation__content p {
-  text-wrap: balance;
-}
 .apresentation__content h1 {
-  font: 600 2rem "Playfair Display", serif;
-  color: #2b0f39;
-  text-transform: uppercase;
-  position: relative;
+  color: #2B0F39;
+  display: flex;
+  flex-direction: column;
 }
 .apresentation__content h1::after, .apresentation__content h1::before {
-  background-color: #6a5975;
-  opacity: 0.3;
+  background-color: #2B0F39;
+  opacity: 0.25;
   content: "";
   position: absolute;
-  height: 15%;
+  height: 0.9rem;
   left: -2px;
-  z-index: -1;
 }
 .apresentation__content h1::after {
-  bottom: 0;
   width: calc(100% + 6px);
+  bottom: 0;
 }
 .apresentation__content h1::before {
-  width: 73%;
+  width: 63%;
   top: 1.6rem;
 }
 .apresentation__content p {
-  font: 500 1.2rem/1.5rem "Open Sans", sans-serif;
-  color: #2b0f39;
+  color: #2B0F39;
 }
 .apresentation__content button {
-  background-color: #2b0f39;
   border: none;
   width: 13rem;
   height: 4rem;
   border-radius: 4rem;
-  font: 500 0.9rem/1.5rem "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #C2B4BE;
+  filter: drop-shadow(0 0 15px #481B68);
+  overflow: hidden;
+  z-index: 1;
+}
+.apresentation__content button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #481B68;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.apresentation__content button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #2B0F39;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.apresentation__content button:hover:before {
+  width: 100%;
+}
+
+.main__why__floraweb {
+  background-color: #38303B;
   color: #E2DBD4;
-  filter: drop-shadow(0 0 15px #2b0f39);
-  cursor: pointer;
+}
+
+.why__floraweb__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.why__floraweb__reasons {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.why__floraweb__reasons h2::after {
+  background-color: #6A5975;
+  opacity: 0.25;
+  content: "";
+  position: absolute;
+  height: 0.9rem;
+  left: -0.125rem;
+  bottom: 0.1rem;
+  width: 87%;
+}
+
+.why__floraweb__items {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.why__floraweb__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 0 0;
+  gap: 1.5rem;
+}
+.why__floraweb__item p {
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.why__floraweb__image {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  top: 1rem;
+}
+.why__floraweb__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

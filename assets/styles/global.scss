@@ -12,16 +12,58 @@ html {
 }
 
 body {
-  background-color: $quinary-color;
+  background-color: $primary-color-2;
   overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  background-color: $primary-color;
+  background-color: $secondary-color-1;
 }
 
-::-webkit-scrollbar-thumb { 
-  background-color: $quartiary-color;
-  border: .2rem solid $primary-color;
+::-webkit-scrollbar-thumb {
+  background-color: $secondary-color-4;
+  border: 0.2rem solid $secondary-color-1;
   border-radius: 1rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a,
+p,
+button {
+  font:
+    500 1rem/1.5rem "Open Sans",
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font:
+    600 2rem "Playfair Display",
+    serif !important;
+  text-transform: uppercase;
+  position: relative;
 }

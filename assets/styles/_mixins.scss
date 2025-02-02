@@ -5,3 +5,75 @@
   align-items: $align;
   flex-wrap: wrap;
 }
+
+@mixin button-transition($background-one, $background-two) {
+  button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-one;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+
+  button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $background-two;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+
+  button:hover:before {
+    width: 100%;
+  }
+}
+
+@mixin title__effect__two__lines(
+  $color,
+  $first__line__bottom,
+  $first__line__width,
+  $second__line__width,
+  $second__line__top
+) {
+  &::after,
+  &::before {
+    background-color: $color;
+    opacity: 0.25;
+    content: "";
+    position: absolute;
+    height: .9rem;
+    left: -2px;
+  }
+
+  &::after {
+    width: $first__line__width;
+    bottom: $first__line__bottom;
+  }
+
+  &::before {
+    width: $second__line__width;
+    top: $second__line__top;
+  }
+}
+
+@mixin title__effect__one__line($color, $bottom, $width) {
+  &::after {
+    background-color: $color;
+    opacity: 0.25;
+    content: "";
+    position: absolute;
+    height: .9rem;
+    left: -0.125rem;
+    bottom: $bottom;
+    width: $width;
+  }
+}

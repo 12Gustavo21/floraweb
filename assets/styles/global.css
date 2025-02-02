@@ -14,11 +14,49 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: #2b0f39;
+  background-color: #2B0F39;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #CFC3C6;
-  border: 0.2rem solid #2b0f39;
+  background-color: #C2B4BE;
+  border: 0.2rem solid #2B0F39;
   border-radius: 1rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a,
+p,
+button {
+  font: 500 1rem/1.5rem "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: 600 2rem "Playfair Display", serif !important;
+  text-transform: uppercase;
+  position: relative;
 }/*# sourceMappingURL=global.css.map */

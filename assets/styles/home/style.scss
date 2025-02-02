@@ -11,8 +11,14 @@
 }
 
 .header.visible {
+  width: 99%;
   top: 0;
-  background-color: $quartiary-color;
+  margin: 0.5rem 0 0 0.5rem;
+  background: rgba(226, 219, 212, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.3125rem);
+  border: 0.0625rem solid rgba(226, 219, 212, 0.4);
 }
 
 .header.hidden {
@@ -25,16 +31,15 @@
   @include flex(row, space-around, center);
 }
 
-.title__box {
-  font:
-    900 1rem "Playfair Display",
-    serif;
-  text-transform: uppercase;
-  color: $primary-color;
+@media only screen and (width <= 850px) {
+  .header__container {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
 }
 
 .list__box {
-  width: 40%;
+  width: 45%;
   height: 100%;
   @include flex(row, center, center);
 
@@ -42,10 +47,11 @@
     width: 100%;
     list-style: none;
     @include flex(row, space-between, center);
+    margin: 0;
 
     li {
       cursor: pointer;
-      color: $primary-color;
+      color: $secondary-color-1;
       font:
         600 1rem "Open Sans",
         serif;
@@ -53,7 +59,7 @@
       transition: $default-transition;
 
       a {
-        color: $primary-color;
+        color: $secondary-color-1;
         text-decoration: none;
       }
 
@@ -64,8 +70,8 @@
       &::after {
         content: "";
         display: block;
-        border: 1px solid $primary-color;
-        transform: scaleX(0.05);
+        border: 1px solid $secondary-color-1;
+        transform: scaleX(0);
         left: 0;
         bottom: 0;
         transition: $default-transition;
@@ -78,9 +84,77 @@
   }
 }
 
+@media only screen and (width <= 1300px) {
+  .list__box {
+    width: 60%;
+    ul {
+      li {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: $secondary-color-1;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+@media only screen and (width <= 850px) {
+  .burger {
+    display: block;
+  }
+
+  .list__box {
+    display: none;
+  }
+}
+
 .actions {
   width: 5rem;
   @include flex(row, space-between, center);
+}
+
+@media only screen and (width <= 850px) {
+  .actions {
+    gap: 1rem;
+    min-width: 20%;
+    width: auto;
+  }
 }
 
 .actions__cart,
@@ -96,8 +170,16 @@ main {
   min-height: auto;
 }
 
-.main__container {
-  padding: 0 0 3rem 9.7rem;
+.main__apresentation,
+.main__why__floraweb {
+  padding-left: 6.7vw;
+}
+
+@media only screen and (width <= 1300px) {
+  .main__apresentation,
+  .main__why__floraweb {
+    padding-left: 4vw;
+  }
 }
 
 .main__apresentation {
@@ -108,63 +190,85 @@ main {
 }
 
 .apresentation__content {
-  width: 30rem;
+  width: 35rem;
   height: 50%;
   @include flex(column, space-evenly, flex-start);
 
-  h1,
-  p {
-    text-wrap: balance;
-  }
-
   h1 {
-    font:
-      600 2rem "Playfair Display",
-      serif;
-    color: $primary-color;
-    text-transform: uppercase;
-    position: relative;
+    color: $secondary-color-1;
+    display: flex;
+    flex-direction: column;
 
-    &::after,
-    &::before {
-      background-color: $tertiary-color;
-      opacity: 0.3;
-      content: "";
-      position: absolute;
-      height: 15%;
-      left: -2px;
-      z-index: -1;
-    }
-
-    &::after {
-      bottom: 0;
-      width: calc(100% + 6px);
-    }
-
-    &::before {
-      width: 73%;
-      top: 1.6rem;
-    }
+    @include title__effect__two__lines($secondary-color-1, 0, calc(100% + 6px), 63%, 1.6rem);
   }
 
   p {
-    font:
-      500 1.2rem/1.5rem "Open Sans",
-      sans-serif;
-    color: $primary-color;
+    color: $secondary-color-1;
   }
 
   button {
-    background-color: $primary-color;
     border: none;
     width: 13rem;
     height: 4rem;
     border-radius: 4rem;
-    font:
-      500 0.9rem/1.5rem "Open Sans",
-      sans-serif;
-    color: $quinary-color;
-    filter: drop-shadow(0 0 15px $primary-color);
-    cursor: pointer;
+    font-size: 0.9rem;
+    color: $secondary-color-4;
+    filter: drop-shadow(0 0 15px $secondary-color-2);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  @include button-transition($secondary-color-2, $secondary-color-1);
+}
+
+.main__why__floraweb {
+  background-color: $primary-color-1;
+  color: $primary-color-2;
+}
+
+.why__floraweb__content {
+  width: 100%;
+  height: 100%;
+  @include flex(row, space-between, center);
+}
+
+.why__floraweb__reasons {
+  width: 50%;
+  height: 100%;
+  @include flex(column, space-evenly, flex-start);
+
+  h2 {
+    @include title__effect__one__line($secondary-color-3, 0.1rem, 87%);
+  }
+}
+
+.why__floraweb__items {
+  width: auto;
+  height: 100%;
+  @include flex(row, space-between, center);
+}
+
+.why__floraweb__item {
+  flex: 1;
+  @include flex(column, center, flex-start);
+  padding: 2rem 2rem 0 0;
+  gap: 1.5rem;
+
+  p {
+    text-wrap: wrap;
+    @include flex(column, center, flex-start);
+  }
+}
+
+.why__floraweb__image {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  top: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
