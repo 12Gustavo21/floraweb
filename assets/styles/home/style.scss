@@ -1,6 +1,10 @@
 @import "../mixins";
 @import "../variables";
 
+body {
+  cursor: url(../../cursors/FireFlower-Normal.ani), auto !important;
+}
+
 .header {
   width: 100%;
   height: 10vh;
@@ -50,7 +54,6 @@
     margin: 0;
 
     li {
-      cursor: pointer;
       color: $secondary-color-1;
       font:
         600 1rem "Open Sans",
@@ -100,7 +103,7 @@
   width: 30px;
   height: 20px;
   background: transparent;
-  cursor: pointer;
+
   display: none;
 }
 
@@ -160,6 +163,7 @@ span:nth-of-type(3) {
 .actions__cart,
 .actions__favorite {
   img {
+    cursor: url(../../cursors/pointer.cur), pointer !important;
     width: 1.7rem;
     height: 1.7rem;
   }
@@ -168,18 +172,6 @@ span:nth-of-type(3) {
 main {
   height: 100dvh;
   min-height: auto;
-}
-
-.main__apresentation,
-.main__why__floraweb {
-  padding-left: 6.7vw;
-}
-
-@media only screen and (width <= 1300px) {
-  .main__apresentation,
-  .main__why__floraweb {
-    padding-left: 4vw;
-  }
 }
 
 .main__apresentation {
@@ -199,7 +191,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    @include title__effect__two__lines($secondary-color-1, 0, calc(100% + 6px), 63%, 1.6rem);
+    @include title__effect__two__lines($secondary-color-2, 0, calc(100% + 6px), 63%, 1.6rem);
   }
 
   p {
@@ -238,7 +230,7 @@ main {
   @include flex(column, space-evenly, flex-start);
 
   h2 {
-    @include title__effect__one__line($secondary-color-3, 0.1rem, 87%);
+    @include title__effect__one__line($secondary-color-3, 0.1rem, 100%);
   }
 }
 
@@ -270,5 +262,201 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.main__choose__bouquet {
+  @include flex(row, space-between, flex-start);
+  margin: 4rem 0 7rem 0;
+}
+
+.choose__bouquet__content {
+  width: 25%;
+  gap: 1.5rem;
+  @include flex(column, center, flex-start);
+
+  h2 {
+    @include flex(column, center, flex-start);
+    @include title__effect__two__lines($secondary-color-2, 0, 102%, 93%, 1.6rem);
+  }
+}
+
+.choose__bouquet__list {
+  width: 100%;
+  height: 100%;
+  @include flex(column, space-between, flex-start);
+  gap: 1.5rem;
+  color: $secondary-color-3;
+  font-weight: 600;
+
+  li {
+    transition: $default-transition;
+
+    &:hover {
+      color: $secondary-color-1;
+    }
+  }
+}
+
+.choose__bouquet__list .choose {
+  color: $secondary-color-1;
+  font-weight: bold;
+  list-style: disc;
+}
+
+.see__all__options {
+  width: 100%;
+  height: 100%;
+  @include flex(column, center, flex-start);
+  gap: 0.5rem;
+  color: $secondary-color-1;
+
+  h3 {
+    text-transform: capitalize;
+  }
+
+  button {
+    border: none;
+    width: 17rem;
+    height: 3.5rem;
+    border-radius: 4rem;
+    font-size: 0.9rem;
+    color: $secondary-color-2;
+    border: 0.125rem solid $secondary-color-2;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover {
+      color: $secondary-color-4;
+    }
+  }
+
+  @include button-transition(transparent, $secondary-color-1);
+}
+
+.bouquet__cards {
+  width: 75%;
+  height: 100%;
+  @include flex(row, flex-end, center);
+  padding-right: 3rem;
+  gap: 1.5rem;
+}
+
+.bouquet__card {
+  width: 17rem;
+  height: 23.25rem;
+  @include flex(column, space-between, center);
+  gap: 1rem;
+  background-color: $secondary-color-5;
+  color: $secondary-color-1;
+  position: relative;
+  padding: 1rem 0;
+
+  figure {
+    position: absolute;
+    top: 3.5rem;
+    width: 14rem;
+    height: 13rem;
+    @include flex(row, center, center);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 9.5rem;
+      height: 9.5rem;
+      top: 2rem;
+      background-color: $secondary-color-4;
+      border-radius: 100%;
+      z-index: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    @include flex(column, center, center);
+  }
+
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  button {
+    border: none;
+    width: 12rem;
+    height: 3.5rem;
+    border-radius: 4rem;
+    font-size: 0.9rem;
+    color: $secondary-color-4;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+
+  @include button-transition($secondary-color-2, $secondary-color-1);
+}
+
+.bouquet__card.bigger {
+  width: 35.5rem !important;
+}
+
+.bouquet__card:nth-child(4),
+.bouquet__card:nth-child(5) {
+  height: 14rem;
+}
+
+.bouquet__card:nth-child(4) {
+  @include flex(column, flex-start, flex-start);
+  padding-left: 2rem;
+  gap: 4.5rem;
+  position: relative;
+
+  figure {
+    right: 0;
+    top: 0;
+  }
+
+  p {
+    @include flex(column, center, flex-start);
+    text-align: left;
+  }
+
+  .bouquet__description {
+    font-weight: lighter;
+    top: 4.5rem;
+    position: absolute
+  }
+
+  div {
+    @include flex(row-reverse, center, center);
+    gap: 1rem;
+    
+    .price {
+      margin: 0 !important;
+    }
+  }
+}
+
+.bouquet__card:nth-child(5) {
+  figure {
+    top: 4.5rem;
+    width: 9.5rem;
+    height: 9.5rem;
+
+    &::after {
+      width: 9rem;
+      height: 8.5rem;
+      top: 0.5rem;
+    }
   }
 }

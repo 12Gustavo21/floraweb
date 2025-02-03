@@ -43,15 +43,19 @@
   $first__line__width,
   $second__line__width,
   $second__line__top
-) {
+) 
+{
+  z-index: 1;
+
   &::after,
   &::before {
     background-color: $color;
-    opacity: 0.25;
+    opacity: 0.30;
     content: "";
     position: absolute;
     height: .9rem;
-    left: -2px;
+    left: -0.125rem;
+    z-index: -1;
   }
 
   &::after {
@@ -66,14 +70,17 @@
 }
 
 @mixin title__effect__one__line($color, $bottom, $width) {
+  z-index: 1;
+
   &::after {
     background-color: $color;
-    opacity: 0.25;
+    opacity: 0.30;
     content: "";
     position: absolute;
     height: .9rem;
     left: -0.125rem;
     bottom: $bottom;
     width: $width;
+    z-index: -1;
   }
 }

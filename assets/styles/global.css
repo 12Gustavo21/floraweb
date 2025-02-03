@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: url(../cursors/normal.cur), auto !important;
 }
 
 html {
@@ -23,13 +24,27 @@ body {
   border-radius: 1rem;
 }
 
+::-moz-selection {
+  background-color: #2B0F39;
+  color: #E2DBD4;
+}
+
+::selection {
+  background-color: #2B0F39;
+  color: #E2DBD4;
+}
+
+a,
+button,
+li {
+  cursor: url(../cursors/pointer.cur), pointer !important;
+}
+
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 
 button {
-  cursor: pointer;
   border: none;
   outline: none;
 }
@@ -56,7 +71,34 @@ h3,
 h4,
 h5,
 h6 {
-  font: 600 2rem "Playfair Display", serif !important;
+  font-family: "Playfair Display", serif !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
   position: relative;
+}
+
+h1,
+h2 {
+  font-size: 2rem !important;
+}
+
+.main__apresentation,
+.main__why__floraweb,
+.main__choose__bouquet {
+  padding-left: 6.7vw;
+}
+
+@media only screen and (width <= 1300px) {
+  .main__apresentation,
+  .main__why__floraweb,
+  .main__choose__bouquet {
+    padding-left: 4vw;
+  }
+}
+img {
+  image-rendering: pixelated;
+}
+
+ul {
+  list-style: none;
 }/*# sourceMappingURL=global.css.map */

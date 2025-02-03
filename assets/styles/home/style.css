@@ -1,3 +1,7 @@
+body {
+  cursor: url(../../cursors/FireFlower-Normal.ani), auto !important;
+}
+
 .header {
   width: 100%;
   height: 10vh;
@@ -59,7 +63,6 @@
   margin: 0;
 }
 .list__box ul li {
-  cursor: pointer;
   color: #2B0F39;
   font: 600 1rem "Open Sans", serif;
   position: relative;
@@ -98,7 +101,6 @@
   width: 30px;
   height: 20px;
   background: transparent;
-  cursor: pointer;
   display: none;
 }
 
@@ -158,6 +160,7 @@ span:nth-of-type(3) {
 }
 .actions__cart img,
 .actions__favorite img {
+  cursor: url(../../cursors/pointer.cur), pointer !important;
   width: 1.7rem;
   height: 1.7rem;
 }
@@ -167,17 +170,6 @@ main {
   min-height: auto;
 }
 
-.main__apresentation,
-.main__why__floraweb {
-  padding-left: 6.7vw;
-}
-
-@media only screen and (width <= 1300px) {
-  .main__apresentation,
-  .main__why__floraweb {
-    padding-left: 4vw;
-  }
-}
 .main__apresentation {
   width: 100%;
   height: 100dvh;
@@ -202,14 +194,16 @@ main {
   color: #2B0F39;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 .apresentation__content h1::after, .apresentation__content h1::before {
-  background-color: #2B0F39;
-  opacity: 0.25;
+  background-color: #481B68;
+  opacity: 0.3;
   content: "";
   position: absolute;
   height: 0.9rem;
-  left: -2px;
+  left: -0.125rem;
+  z-index: -1;
 }
 .apresentation__content h1::after {
   width: calc(100% + 6px);
@@ -284,15 +278,19 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.why__floraweb__reasons h2 {
+  z-index: 1;
+}
 .why__floraweb__reasons h2::after {
   background-color: #6A5975;
-  opacity: 0.25;
+  opacity: 0.3;
   content: "";
   position: absolute;
   height: 0.9rem;
   left: -0.125rem;
   bottom: 0.1rem;
-  width: 87%;
+  width: 100%;
+  z-index: -1;
 }
 
 .why__floraweb__items {
@@ -335,4 +333,294 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main__choose__bouquet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 4rem 0 7rem 0;
+}
+
+.choose__bouquet__content {
+  width: 25%;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.choose__bouquet__content h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.choose__bouquet__content h2::after, .choose__bouquet__content h2::before {
+  background-color: #481B68;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  height: 0.9rem;
+  left: -0.125rem;
+  z-index: -1;
+}
+.choose__bouquet__content h2::after {
+  width: 102%;
+  bottom: 0;
+}
+.choose__bouquet__content h2::before {
+  width: 93%;
+  top: 1.6rem;
+}
+
+.choose__bouquet__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #6A5975;
+  font-weight: 600;
+}
+.choose__bouquet__list li {
+  transition: all 0.3s ease-in-out;
+}
+.choose__bouquet__list li:hover {
+  color: #2B0F39;
+}
+
+.choose__bouquet__list .choose {
+  color: #2B0F39;
+  font-weight: bold;
+  list-style: disc;
+}
+
+.see__all__options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #2B0F39;
+}
+.see__all__options h3 {
+  text-transform: capitalize;
+}
+.see__all__options button {
+  border: none;
+  width: 17rem;
+  height: 3.5rem;
+  border-radius: 4rem;
+  font-size: 0.9rem;
+  color: #481B68;
+  border: 0.125rem solid #481B68;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.see__all__options button:hover {
+  color: #C2B4BE;
+}
+.see__all__options button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.see__all__options button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #2B0F39;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.see__all__options button:hover:before {
+  width: 100%;
+}
+
+.bouquet__cards {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 3rem;
+  gap: 1.5rem;
+}
+
+.bouquet__card {
+  width: 17rem;
+  height: 23.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #D0C5C8;
+  color: #2B0F39;
+  position: relative;
+  padding: 1rem 0;
+}
+.bouquet__card figure {
+  position: absolute;
+  top: 3.5rem;
+  width: 14rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bouquet__card figure::after {
+  content: "";
+  position: absolute;
+  width: 9.5rem;
+  height: 9.5rem;
+  top: 2rem;
+  background-color: #C2B4BE;
+  border-radius: 100%;
+  z-index: 0;
+}
+.bouquet__card figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.bouquet__card p {
+  font-size: 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bouquet__card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.bouquet__card button {
+  border: none;
+  width: 12rem;
+  height: 3.5rem;
+  border-radius: 4rem;
+  font-size: 0.9rem;
+  color: #C2B4BE;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+.bouquet__card button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #481B68;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.bouquet__card button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #2B0F39;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.bouquet__card button:hover:before {
+  width: 100%;
+}
+
+.bouquet__card.bigger {
+  width: 35.5rem !important;
+}
+
+.bouquet__card:nth-child(4),
+.bouquet__card:nth-child(5) {
+  height: 14rem;
+}
+
+.bouquet__card:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  gap: 4.5rem;
+  position: relative;
+}
+.bouquet__card:nth-child(4) figure {
+  right: 0;
+  top: 0;
+}
+.bouquet__card:nth-child(4) p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.bouquet__card:nth-child(4) .bouquet__description {
+  font-weight: lighter;
+  top: 4.5rem;
+  position: absolute;
+}
+.bouquet__card:nth-child(4) div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.bouquet__card:nth-child(4) div .price {
+  margin: 0 !important;
+}
+
+.bouquet__card:nth-child(5) figure {
+  top: 4.5rem;
+  width: 9.5rem;
+  height: 9.5rem;
+}
+.bouquet__card:nth-child(5) figure::after {
+  width: 9rem;
+  height: 8.5rem;
+  top: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
