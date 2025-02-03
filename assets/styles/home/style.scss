@@ -493,6 +493,7 @@ main {
   background-color: $primary-color-1;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  padding-right: 6rem;
 }
 
 .inside__house__title {
@@ -501,13 +502,13 @@ main {
 
   h2 {
     @include flex(column, center, flex-start);
-    @include title__effect__two__lines($secondary-color-3, 0, 15%, 28.5%, 1.6rem);
+    @include title__effect__two__lines($secondary-color-3, 0, 13.1rem, 25rem, 1.6rem);
   }
 }
 
 .inside__house__places {
-  @include flex(row, flex-start, center);
-  gap: 1rem;
+  @include flex(row, center, center);
+  gap: 5.3rem;
 
   figure {
     width: 13rem;
