@@ -84,14 +84,16 @@ h2 {
 
 .main__apresentation,
 .main__why__floraweb,
-.main__choose__bouquet {
+.main__choose__bouquet,
+.main__inside__house {
   padding-left: 6.7vw;
 }
 
 @media only screen and (width <= 1300px) {
   .main__apresentation,
   .main__why__floraweb,
-  .main__choose__bouquet {
+  .main__choose__bouquet,
+  .main__inside__house {
     padding-left: 4vw;
   }
 }

@@ -377,6 +377,11 @@ main {
       object-fit: cover;
       position: relative;
       z-index: 1;
+      transition: $default-transition;
+
+      &:hover {
+        transform: rotate(20deg);
+      }
     }
   }
 
@@ -424,6 +429,12 @@ main {
   figure {
     right: 0;
     top: 0;
+
+    img {
+      &:hover {
+        transform: translateY(-1rem);
+      }
+    }
   }
 
   p {
@@ -434,13 +445,13 @@ main {
   .bouquet__description {
     font-weight: lighter;
     top: 4.5rem;
-    position: absolute
+    position: absolute;
   }
 
   div {
     @include flex(row-reverse, center, center);
     gap: 1rem;
-    
+
     .price {
       margin: 0 !important;
     }
@@ -452,11 +463,69 @@ main {
     top: 4.5rem;
     width: 9.5rem;
     height: 9.5rem;
+    overflow: hidden;
 
     &::after {
       width: 9rem;
       height: 8.5rem;
       top: 0.5rem;
+    }
+
+    img {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.main__location {
+  width: 100%;
+  height: 50vh;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main__inside__house {
+  background-color: $primary-color-1;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.inside__house__title {
+  color: $primary-color-2;
+  padding-bottom: 2rem;
+
+  h2 {
+    @include flex(column, center, flex-start);
+    @include title__effect__two__lines($secondary-color-3, 0, 15%, 28.5%, 1.6rem);
+  }
+}
+
+.inside__house__places {
+  @include flex(row, flex-start, center);
+  gap: 1rem;
+
+  figure {
+    width: 13rem;
+    height: 20rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: $default-transition;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: sepia(50%);
+      }
     }
   }
 }
