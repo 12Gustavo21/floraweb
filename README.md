@@ -20,4 +20,4 @@ _Technologies_
 - code . (if you use VSCode)
 - start a live server
 
-## 💻 Online Page: https://floraweb.bohr.io
+## 💻 Online Page: https://floraweb.vercel.app
