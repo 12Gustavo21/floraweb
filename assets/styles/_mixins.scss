@@ -30,6 +30,7 @@
     transition: all 0.3s;
     border-radius: 10rem;
     z-index: -1;
+    transition: $default-transition;
   }
 
   button:hover:before {
@@ -46,7 +47,7 @@
 ) 
 {
   z-index: 1;
-
+  
   &::after,
   &::before {
     background-color: $color;
@@ -56,16 +57,25 @@
     height: .9rem;
     left: -0.125rem;
     z-index: -1;
+    transition: $default-transition;
   }
-
+  
   &::after {
     width: $first__line__width;
     bottom: $first__line__bottom;
   }
-
+  
   &::before {
     width: $second__line__width;
     top: $second__line__top;
+  }
+
+  &:hover::after {
+    width: 0;
+  }
+
+  &:hover::before {
+    width: 0;
   }
 }
 
@@ -82,5 +92,10 @@
     bottom: $bottom;
     width: $width;
     z-index: -1;
+    transition: $default-transition;
+  }
+
+  &:hover::after {
+    width: 0;
   }
 }

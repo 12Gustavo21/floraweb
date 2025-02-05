@@ -18,3 +18,21 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+document.querySelectorAll('.group').forEach(group => {
+  const input = group.querySelector('.input');
+  const label = group.querySelector('.label');
+
+  input.addEventListener('focus', () => {
+      label.classList.add('active');
+  });
+
+  input.addEventListener('blur', () => {
+      if (input.value.trim() === '') {
+          label.classList.remove('active');
+      }
+  });
+});
+
+const year = document.querySelector(".year");
+year.innerHTML = new Date().getFullYear();

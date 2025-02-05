@@ -170,8 +170,7 @@ span:nth-of-type(3) {
 }
 
 main {
-  height: 100dvh;
-  min-height: auto;
+  min-height: 100dvh;
 }
 
 .main__apresentation {
@@ -191,7 +190,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    @include title__effect__two__lines($secondary-color-2, 0, calc(100% + 6px), 63%, 1.6rem);
+    @include title__effect__two__lines($secondary-color-2, 0, 101%, 63%, 1.6rem);
   }
 
   p {
@@ -199,11 +198,9 @@ main {
   }
 
   button {
-    border: none;
     width: 13rem;
     height: 4rem;
     border-radius: 4rem;
-    font-size: 0.9rem;
     color: $secondary-color-4;
     filter: drop-shadow(0 0 15px $secondary-color-2);
     overflow: hidden;
@@ -214,20 +211,21 @@ main {
 }
 
 .main__why__floraweb {
-  background-color: $primary-color-1;
+  height: 50vh;
   color: $primary-color-2;
+  background: url(../../img/lavender.png) no-repeat right center/contain;
+  background-color: $primary-color-1;
 }
 
 .why__floraweb__content {
   width: 100%;
   height: 100%;
-  @include flex(row, space-between, center);
+  @include flex(row, flex-start, center);
 }
 
 .why__floraweb__reasons {
-  width: 50%;
-  height: 100%;
-  @include flex(column, space-evenly, flex-start);
+  width: 100%;
+  @include flex(row, flex-start, center);
 
   h2 {
     @include title__effect__one__line($secondary-color-3, 0.1rem, 100%);
@@ -235,13 +233,13 @@ main {
 }
 
 .why__floraweb__items {
-  width: auto;
+  width: 100%;
   height: 100%;
-  @include flex(row, space-between, center);
+  @include flex(row, flex-start, center);
+  gap: 5rem;
 }
 
 .why__floraweb__item {
-  flex: 1;
   @include flex(column, center, flex-start);
   padding: 2rem 2rem 0 0;
   gap: 1.5rem;
@@ -316,11 +314,9 @@ main {
   }
 
   button {
-    border: none;
     width: 17rem;
     height: 3.5rem;
     border-radius: 4rem;
-    font-size: 0.9rem;
     color: $secondary-color-2;
     border: 0.125rem solid $secondary-color-2;
     position: relative;
@@ -397,11 +393,9 @@ main {
   }
 
   button {
-    border: none;
     width: 12rem;
     height: 3.5rem;
     border-radius: 4rem;
-    font-size: 0.9rem;
     color: $secondary-color-4;
     overflow: hidden;
     z-index: 1;
@@ -493,7 +487,6 @@ main {
   background-color: $primary-color-1;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  padding-right: 6rem;
 }
 
 .inside__house__title {
@@ -502,13 +495,13 @@ main {
 
   h2 {
     @include flex(column, center, flex-start);
-    @include title__effect__two__lines($secondary-color-3, 0, 13.1rem, 25rem, 1.6rem);
+    @include title__effect__two__lines($secondary-color-3, 0, 15%, 28.5%, 1.6rem);
   }
 }
 
 .inside__house__places {
-  @include flex(row, center, center);
-  gap: 5.3rem;
+  @include flex(row, space-between, center);
+  padding-right: 5rem;
 
   figure {
     width: 13rem;
@@ -529,4 +522,156 @@ main {
       }
     }
   }
+}
+
+.main__contact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-right: 5rem;
+  @include flex(row, space-between, center);
+  color: $secondary-color-1;
+}
+
+.contact__form {
+  width: 40%;
+  @include flex(column, center, flex-start);
+  gap: 2rem;
+
+  h2 {
+    @include title__effect__two__lines($secondary-color-2, 0, 26rem, 13rem, 1.6rem);
+  }
+
+  form {
+    width: 80%;
+    @include flex(column, center, flex-start);
+    gap: 3rem;
+
+    .group {
+      width: 100%;
+      position: relative;
+
+      label {
+        position: absolute;
+        left: 0.3125rem;
+        top: 0.625rem;
+        color: $secondary-color-3;
+        transition: $default-transition;
+      }
+
+      .active {
+        top: -1rem;
+      }
+
+      input {
+        width: 100%;
+        border-bottom: 0.01rem solid $secondary-color-4;
+        padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
+        color: $secondary-color-1;
+
+        &:focus ~ label {
+          font-size: 0.9rem;
+          top: -1rem;
+        }
+      }
+    }
+
+    button {
+      width: 15rem;
+      height: 3rem;
+      color: $secondary-color-4;
+      border-radius: 4rem;
+      filter: drop-shadow(0 0 15px $secondary-color-2);
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    @include button-transition($secondary-color-2, $secondary-color-1);
+  }
+}
+
+.contact__info {
+  width: 60%;
+  height: 25rem;
+  background-color: $secondary-color-5;
+  padding: 2rem 0 2rem 2rem;
+  position: relative;
+}
+
+.info__content {
+  position: relative;
+  @include flex(row, flex-start, center);
+
+  .info__details {
+    width: 50%;
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+
+    .info__item:nth-child(2) {
+      margin-top: 0.5rem;
+    }
+
+    .info__item {
+      @include flex(row, flex-start, center);
+      gap: 1rem;
+      position: relative;
+
+      p {
+        width: 15rem;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+    }
+
+    .info__description {
+      padding-top: 2rem;
+
+      p {
+        font-size: 0.8rem;
+        width: 14.5rem;
+        line-height: 1.125rem;
+      }
+    }
+
+    figure {
+      width: 15rem;
+      height: 20rem;
+      position: absolute;
+      bottom: -2.3rem;
+      left: 14.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 13rem;
+        height: 13rem;
+        top: 5rem;
+        left: 0;
+        background-color: $secondary-color-4;
+        border-radius: 100%;
+        z-index: 0;
+      }
+    }
+
+    figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      position: relative;
+      transition: $default-transition;
+
+      &:hover {
+        filter: hue-rotate(90deg);
+      }
+    }
+  }
+}
+
+.purple__roses {
+  width: 20rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../../img/purple-roses.png) no-repeat center/cover;
 }

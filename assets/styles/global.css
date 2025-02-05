@@ -36,17 +36,20 @@ body {
 
 a,
 button,
-li {
+li,
+a img {
   cursor: url(../cursors/pointer.cur), pointer !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-button {
+button,
+input {
   border: none;
   outline: none;
+  background-color: transparent;
 }
 
 p,
@@ -85,7 +88,9 @@ h2 {
 .main__apresentation,
 .main__why__floraweb,
 .main__choose__bouquet,
-.main__inside__house {
+.main__inside__house,
+.main__contact,
+footer {
   padding-left: 6.7vw;
 }
 
@@ -93,7 +98,8 @@ h2 {
   .main__apresentation,
   .main__why__floraweb,
   .main__choose__bouquet,
-  .main__inside__house {
+  .main__inside__house,
+  .main__contact footer {
     padding-left: 4vw;
   }
 }
@@ -103,4 +109,141 @@ img {
 
 ul {
   list-style: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 40vh;
+  padding-right: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  background-color: #38303B;
+  color: #E2DBD4;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__content .payment__methods {
+  padding: 0.5rem 0;
+}
+.footer__content .payment__methods p {
+  margin: 0;
+}
+.footer__content .payment__methods img {
+  width: 1.375rem;
+  height: 1.375rem;
+  margin: 1rem 1rem 0 0;
+}
+.footer__content a {
+  color: #E2DBD4;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+.footer__content a::after {
+  background-color: #6A5975;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  height: 0.9rem;
+  left: -0.125rem;
+  bottom: 0.01rem;
+  width: 102%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.footer__content a:hover::after {
+  width: 0;
+}
+.footer__content .copyright {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.social__media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 1rem;
+}
+.social__media nav a {
+  width: 1.3rem;
+  height: 1.4rem;
+}
+.social__media nav a img {
+  width: 100%;
+  height: 100%;
+}
+.social__media button {
+  border: 0.1rem solid #E2DBD4;
+  color: #E2DBD4;
+  width: 13.5rem;
+  height: 3rem;
+  border-radius: 10rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.social__media button:hover {
+  color: #2B0F39;
+}
+.social__media button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.social__media button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #E2DBD4;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.social__media button:hover:before {
+  width: 100%;
+}
+
+.social__media__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social__media__content p {
+  font-weight: bold;
+}
+.social__media__content nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */

@@ -34,17 +34,20 @@ body {
 
 a,
 button,
-li {
+li,
+a img {
   cursor: url(../cursors/pointer.cur), pointer !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-button {
+button,
+input {
   border: none;
   outline: none;
+  background-color: transparent;
 }
 
 p,
@@ -85,7 +88,9 @@ h2 {
 .main__apresentation,
 .main__why__floraweb,
 .main__choose__bouquet,
-.main__inside__house {
+.main__inside__house,
+.main__contact,
+footer {
   padding-left: 6.7vw;
 }
 
@@ -93,7 +98,8 @@ h2 {
   .main__apresentation,
   .main__why__floraweb,
   .main__choose__bouquet,
-  .main__inside__house {
+  .main__inside__house,
+  .main__contact footer {
     padding-left: 4vw;
   }
 }
@@ -104,4 +110,92 @@ img {
 
 ul {
   list-style: none;
+}
+
+footer {
+  @include flex(row, space-between, center);
+  height: 40vh;
+  padding-right: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  background-color: $primary-color-1;
+  color: $primary-color-2;
+}
+
+.footer__content {
+  @include flex(column, center, flex-start);
+  gap: 1rem;
+
+  .payment__methods {
+    padding: 0.5rem 0;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      width: 1.375rem;
+      height: 1.375rem;
+      margin: 1rem 1rem 0 0;
+    }
+  }
+
+  a {
+    color: $primary-color-2;
+    position: relative;
+    transition: $default-transition;
+    @include title__effect__one__line($secondary-color-3, 0.01rem, 102%);
+  }
+
+  .copyright {
+    display: flex;
+    gap: 0.3rem;
+  }
+}
+
+.social__media {
+  @include flex(column, space-evenly, center);
+  height: 100%;
+  gap: 1rem;
+
+  nav a {
+    width: 1.3rem;
+    height: 1.4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  button {
+    border: 0.1rem solid $primary-color-2;
+    color: $primary-color-2;
+    width: 13.5rem;
+    height: 3rem;
+    border-radius: 10rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: $default-transition;
+
+    &:hover {
+      color: $secondary-color-1;
+    }
+  }
+
+  @include button-transition(transparent, $primary-color-2);
+}
+
+.social__media__content {
+  @include flex(column, center, center);
+
+  p {
+    font-weight: bold;
+  }
+
+  nav {
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
 }
