@@ -1,0 +1,245 @@
+
+
+header {
+    display: flex;
+    align-items: end;
+    color: #E2DBD4;
+    width: 92%;
+    border-bottom: 1.5px solid #E2DBD4;
+    margin: 40px auto;
+    
+
+}
+
+main {
+    padding: 30px;
+    color: #E2DBD4;
+
+
+
+    .content {
+    display: flex;
+
+    section {
+        padding: 20px;
+        flex: 1;
+
+    }
+    aside {
+        box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+        background-color: #6A5975;
+        border-radius: 5px;
+        width: 400px;
+        height: 650px;
+
+    }
+.frete {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    padding: 20px;
+    color: #E2DBD4;
+}
+input {
+    padding: 5px;
+    background-color: #E2DBD4;
+    border-radius: 15px;
+    margin-right: 5px; 
+    margin-bottom: 5px; 
+    margin: 5px; 
+    width: 95%;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+input::placeholder {
+    color:#2B0F39 ;
+    
+}
+.grupoinput{
+    display: flex;
+    width: 100%;
+    height: 45px;
+
+
+}
+.grupoinput input {
+    margin-left: 10px;
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #ccc; }
+
+.buttonfrete {
+    display: flex;
+    background-color: #38303B;
+    padding: 8px;
+    width: 80%; /* Ocupa 90% da largura do contêiner */
+    height: 35px;
+    font-size: 13px;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 16px; /* Deixa os cantos arredondados */
+    display: block; /* Faz o botão se comportar como bloco */
+    margin: 10px auto; /* Centraliza o botão e adiciona margem em cima e embaixo */
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+
+}
+.cupom {
+    border-top: 1px solid #E2DBD4 ;
+    text-align: left;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    padding: 15px;
+    color: #E2DBD4;
+}
+.pcupom {
+    font-size: 12px;
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 0 10px; /* Adiciona espaço nas laterais (10px em cada lado) */
+}
+.total {
+    margin-top: 20px;
+    height: 210px;
+    background-color: #38303B;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+.infotot {
+    padding: 20px;
+    > div {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+}
+.comprabutton {     display: flex;
+    background-color: #C2B4BE;
+    padding: 8px;
+    width: 80%; /* Ocupa 90% da largura do contêiner */
+    height: 35px;
+    font-size: 13px;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    color: #38303B; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 16px; /* Deixa os cantos arredondados */
+    display: block; /* Faz o botão se comportar como bloco */
+    margin: 10px auto; /* Centraliza o botão e adiciona margem em cima e embaixo */
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+  }
+
+}
+table {
+    background-color: #6A5975;
+    width: 90%;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    thead {
+        tr {
+            
+            th {
+                text-align: left;
+                font-family: 'Open Sans';
+                color: #E2DBD4;
+                padding: 20px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            border-bottom: 1px solid #E2DBD4 ;
+            
+            &:last-child {
+                border: 0;
+            }
+            position: relative;
+            
+            .product img{
+                width: 120px;
+                height: 130px;
+                
+            }
+        }
+    }
+}
+.product{
+    display: flex;
+    align-items: center;
+
+    figure {
+        position: relative;
+        top: 0.5rem;
+
+        
+    
+    }
+
+    img { 
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 9.5rem;
+            height: 9.5rem;
+            top: 2rem;
+            background-color: #38303B;
+            border-radius: 100%;
+            z-index: 0;
+        }
+     
+    }
+
+    .info{
+        margin: left 20px;
+        .name{ 
+            font-size: 10px;
+            color: #C2B4BE;
+            
+        }
+        .category{  
+            color: #E2DBD4; 
+        
+
+    }
+    
+ }
+}
+
+button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    color: #E2DBD4;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+p {
+    padding-top: 5px;
+}
+
+.container {
+    align-items: left;
+    width: 100%; /* A largura do contêiner é 100% da tela ou do elemento pai */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor */
+    
+  }
+  
+  button.grande {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: 60px; /* Altura personalizada */
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    box-sizing: border-box; 
+  }
