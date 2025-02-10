@@ -2,15 +2,15 @@
 header {
   display: flex;
   align-items: end;
-  color: #E2DBD4;
-  width: 92%;
-  border-bottom: 1.5px solid #E2DBD4;
-  margin: 40px auto;
+  color: #e2dbd4;
+  width: 100%;
+  border-bottom: 1.5px solid #e2dbd4;
+  margin: 40px;
 }
 
 main {
   padding: 30px;
-  color: #E2DBD4;
+  color: #e2dbd4;
 }
 main .content {
   display: flex;
@@ -21,7 +21,7 @@ main .content section {
 }
 main .content aside {
   box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
-  background-color: #6A5975;
+  background-color: #6a5975;
   border-radius: 5px;
   width: 400px;
   height: 650px;
@@ -31,11 +31,11 @@ main .content .frete {
   font-family: "Open Sans";
   font-size: 25px;
   padding: 20px;
-  color: #E2DBD4;
+  color: #e2dbd4;
 }
 main .content input {
   padding: 5px;
-  background-color: #E2DBD4;
+  background-color: #e2dbd4;
   border-radius: 15px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -45,10 +45,10 @@ main .content input {
   margin-left: 10px;
 }
 main .content input::-moz-placeholder {
-  color: #2B0F39;
+  color: #2b0f39;
 }
 main .content input::placeholder {
-  color: #2B0F39;
+  color: #2b0f39;
 }
 main .content .grupoinput {
   display: flex;
@@ -65,7 +65,7 @@ main .content .grupoinput input {
 }
 main .content .buttonfrete {
   display: flex;
-  background-color: #38303B;
+  background-color: #38303b;
   padding: 8px;
   width: 80%; /* Ocupa 90% da largura do contêiner */
   height: 35px;
@@ -79,12 +79,12 @@ main .content .buttonfrete {
   box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
 }
 main .content .cupom {
-  border-top: 1px solid #E2DBD4;
+  border-top: 1px solid #e2dbd4;
   text-align: left;
   font-family: "Open Sans";
   font-size: 20px;
   padding: 15px;
-  color: #E2DBD4;
+  color: #e2dbd4;
 }
 main .content .pcupom {
   font-size: 12px;
@@ -94,7 +94,7 @@ main .content .pcupom {
 main .content .total {
   margin-top: 20px;
   height: 210px;
-  background-color: #38303B;
+  background-color: #38303b;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 5px;
@@ -108,13 +108,13 @@ main .content .infotot > div {
 }
 main .content .comprabutton {
   display: flex;
-  background-color: #C2B4BE;
+  background-color: #c2b4be;
   padding: 8px;
-  width: 80%; /* Ocupa 90% da largura do contêiner */
+  width: 80%;
   height: 35px;
   font-size: 13px;
   text-align: center; /* Centraliza o texto dentro do botão */
-  color: #38303B; /* Cor do texto */
+  color: #38303b; /* Cor do texto */
   border: none; /* Remove a borda */
   border-radius: 16px; /* Deixa os cantos arredondados */
   display: block; /* Faz o botão se comportar como bloco */
@@ -123,7 +123,7 @@ main .content .comprabutton {
 }
 
 table {
-  background-color: #6A5975;
+  background-color: #6a5975;
   width: 90%;
   height: 50%;
   border-radius: 20px;
@@ -132,11 +132,11 @@ table {
 table thead tr th {
   text-align: left;
   font-family: "Open Sans";
-  color: #E2DBD4;
+  color: #e2dbd4;
   padding: 20px;
 }
 table tbody tr {
-  border-bottom: 1px solid #E2DBD4;
+  border-bottom: 1px solid #e2dbd4;
   position: relative;
 }
 table tbody tr:last-child {
@@ -165,7 +165,7 @@ table tbody tr .product img {
   width: 9.5rem;
   height: 9.5rem;
   top: 2rem;
-  background-color: #38303B;
+  background-color: #38303b;
   border-radius: 100%;
   z-index: 0;
 }
@@ -174,17 +174,17 @@ table tbody tr .product img {
 }
 .product .info .name {
   font-size: 10px;
-  color: #C2B4BE;
+  color: #c2b4be;
 }
 .product .info .category {
-  color: #E2DBD4;
+  color: #e2dbd4;
 }
 
 button {
   width: 3rem;
   height: 3rem;
   border-radius: 0.3rem;
-  color: #E2DBD4;
+  color: #e2dbd4;
   overflow: hidden;
   z-index: 1;
   position: relative;
