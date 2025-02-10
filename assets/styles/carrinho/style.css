@@ -1,1 +1,209 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+header {
+  display: flex;
+  align-items: end;
+  color: #e2dbd4;
+  width: 100%;
+  border-bottom: 1.5px solid #e2dbd4;
+  margin: 40px;
+}
+
+main {
+  padding: 30px;
+  color: #e2dbd4;
+}
+main .content {
+  display: flex;
+}
+main .content section {
+  padding: 20px;
+  flex: 1;
+}
+main .content aside {
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  background-color: #6a5975;
+  border-radius: 5px;
+  width: 400px;
+  height: 650px;
+}
+main .content .frete {
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 25px;
+  padding: 20px;
+  color: #e2dbd4;
+}
+main .content input {
+  padding: 5px;
+  background-color: #e2dbd4;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin: 5px;
+  width: 95%;
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+}
+main .content input::-moz-placeholder {
+  color: #2b0f39;
+}
+main .content input::placeholder {
+  color: #2b0f39;
+}
+main .content .grupoinput {
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+main .content .grupoinput input {
+  margin-left: 10px;
+  display: flex;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+main .content .buttonfrete {
+  display: flex;
+  background-color: #38303b;
+  padding: 8px;
+  width: 80%; /* Ocupa 90% da largura do contêiner */
+  height: 35px;
+  font-size: 13px;
+  text-align: center; /* Centraliza o texto dentro do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 16px; /* Deixa os cantos arredondados */
+  display: block; /* Faz o botão se comportar como bloco */
+  margin: 10px auto; /* Centraliza o botão e adiciona margem em cima e embaixo */
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+main .content .cupom {
+  border-top: 1px solid #e2dbd4;
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 20px;
+  padding: 15px;
+  color: #e2dbd4;
+}
+main .content .pcupom {
+  font-size: 12px;
+  text-align: left; /* Alinha o texto à esquerda */
+  padding: 0 10px; /* Adiciona espaço nas laterais (10px em cada lado) */
+}
+main .content .total {
+  margin-top: 20px;
+  height: 210px;
+  background-color: #38303b;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+main .content .infotot {
+  padding: 20px;
+}
+main .content .infotot > div {
+  display: flex;
+  justify-content: space-between;
+}
+main .content .comprabutton {
+  display: flex;
+  background-color: #c2b4be;
+  padding: 8px;
+  width: 80%;
+  height: 35px;
+  font-size: 13px;
+  text-align: center; /* Centraliza o texto dentro do botão */
+  color: #38303b; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 16px; /* Deixa os cantos arredondados */
+  display: block; /* Faz o botão se comportar como bloco */
+  margin: 10px auto; /* Centraliza o botão e adiciona margem em cima e embaixo */
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  background-color: #6a5975;
+  width: 90%;
+  height: 50%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+table thead tr th {
+  text-align: left;
+  font-family: "Open Sans";
+  color: #e2dbd4;
+  padding: 20px;
+}
+table tbody tr {
+  border-bottom: 1px solid #e2dbd4;
+  position: relative;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table tbody tr .product img {
+  width: 120px;
+  height: 130px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+}
+.product figure {
+  position: relative;
+  top: 0.5rem;
+}
+.product img {
+  position: relative;
+  z-index: 1;
+}
+.product img::after {
+  content: "";
+  position: absolute;
+  width: 9.5rem;
+  height: 9.5rem;
+  top: 2rem;
+  background-color: #38303b;
+  border-radius: 100%;
+  z-index: 0;
+}
+.product .info {
+  margin: left 20px;
+}
+.product .info .name {
+  font-size: 10px;
+  color: #c2b4be;
+}
+.product .info .category {
+  color: #e2dbd4;
+}
+
+button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  color: #e2dbd4;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+p {
+  padding-top: 5px;
+}
+
+.container {
+  align-items: left;
+  width: 100%; /* A largura do contêiner é 100% da tela ou do elemento pai */
+  padding: 10px; /* Adiciona um pouco de espaço ao redor */
+}
+
+button.grande {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: 60px; /* Altura personalizada */
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */

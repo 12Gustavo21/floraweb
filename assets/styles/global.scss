@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #38303b;
+}
+
 ::-webkit-scrollbar {
   background-color: $secondary-color-1;
 }
