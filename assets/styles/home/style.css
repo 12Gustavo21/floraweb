@@ -9,6 +9,9 @@ body {
   inset: 0;
   z-index: 99;
   transition: all 0.3s ease-in-out;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .header.visible {
@@ -70,7 +73,6 @@ body {
 }
 .list__box ul li a {
   color: #2B0F39;
-  text-decoration: none;
 }
 .list__box ul li:hover {
   transform: translateY(-0.2rem);
@@ -163,10 +165,6 @@ span:nth-of-type(3) {
   cursor: url(../../cursors/pointer.cur), pointer !important;
   width: 1.7rem;
   height: 1.7rem;
-}
-
-main {
-  min-height: 100dvh;
 }
 
 .main__apresentation {
@@ -937,4 +935,8 @@ main {
   top: 0;
   right: 0;
   background: url(../../img/purple-roses.png) no-repeat center/cover;
+}
+
+footer {
+  background-color: #38303B;
 }/*# sourceMappingURL=style.css.map */

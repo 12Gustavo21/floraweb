@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: $primary-color-1;
+}
+
 ::-webkit-scrollbar {
   background-color: $secondary-color-1;
 }
@@ -41,6 +45,7 @@ a img {
 
 a {
   text-decoration: none !important;
+  font-weight: 600 !important;
 }
 
 button,
@@ -62,7 +67,8 @@ h6 {
 
 a,
 p,
-button {
+button,
+table {
   font:
     500 1rem/1.5rem "Open Sans",
     sans-serif;
@@ -85,6 +91,39 @@ h2 {
   font-size: 2rem !important;
 }
 
+header {
+  @include flex(row, space-between, center);
+  margin: 3rem 4rem 4rem 4rem;
+  padding-bottom: 2rem;
+  color: $primary-color-2;
+  border-bottom: 0.01rem solid $primary-color-2;
+
+  .header__details {
+    @include flex(row, center, center);
+    gap: 1.5rem;
+
+    img {
+      cursor: url(../cursors/pointer.cur), pointer !important;
+    }
+
+    h2 {
+      @include title__effect__one__line($secondary-color-3, 0.1rem, 100%);
+    }
+  }
+
+  .header__favorite {
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+main {
+  min-height: 100dvh;
+}
+
+// home
 .main__apresentation,
 .main__why__floraweb,
 .main__choose__bouquet,
@@ -99,9 +138,15 @@ footer {
   .main__why__floraweb,
   .main__choose__bouquet,
   .main__inside__house,
-  .main__contact footer {
+  .main__contact,
+  footer {
     padding-left: 4vw;
   }
+}
+
+// cart
+.main__cart {
+  padding: 0 3.5rem;
 }
 
 img {
@@ -118,7 +163,7 @@ footer {
   padding-right: 5rem;
   padding-top: 4rem;
   padding-bottom: 5rem;
-  background-color: $primary-color-1;
+  background-color: rgba(106, 89, 117, 0.3);
   color: $primary-color-2;
 }
 
@@ -157,6 +202,10 @@ footer {
   @include flex(column, space-evenly, center);
   height: 100%;
   gap: 1rem;
+
+  p {
+    margin-bottom: 1rem;
+  }
 
   nav a {
     width: 1.3rem;
