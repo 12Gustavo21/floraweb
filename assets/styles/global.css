@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background-color: #38303b;
+  background-color: #38303B;
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +47,7 @@ a img {
 
 a {
   text-decoration: none !important;
+  font-weight: 600 !important;
 }
 
 button,
@@ -68,7 +69,8 @@ h6 {
 
 a,
 p,
-button {
+button,
+table {
   font: 500 1rem/1.5rem "Open Sans", sans-serif;
 }
 
@@ -89,6 +91,55 @@ h2 {
   font-size: 2rem !important;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem 4rem 4rem 4rem;
+  padding-bottom: 2rem;
+  color: #E2DBD4;
+  border-bottom: 0.01rem solid #E2DBD4;
+}
+header .header__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+header .header__details img {
+  cursor: url(../cursors/pointer.cur), pointer !important;
+}
+header .header__details h2 {
+  z-index: 1;
+}
+header .header__details h2::after {
+  background-color: #6A5975;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  height: 0.9rem;
+  left: -0.125rem;
+  bottom: 0.1rem;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+header .header__details h2:hover::after {
+  width: 0;
+}
+header .header__favorite img {
+  width: 2rem;
+  height: 2rem;
+}
+
+main {
+  min-height: 100dvh;
+}
+
 .main__apresentation,
 .main__why__floraweb,
 .main__choose__bouquet,
@@ -103,10 +154,15 @@ footer {
   .main__why__floraweb,
   .main__choose__bouquet,
   .main__inside__house,
-  .main__contact footer {
+  .main__contact,
+  footer {
     padding-left: 4vw;
   }
 }
+.main__cart {
+  padding: 0 3.5rem;
+}
+
 img {
   image-rendering: pixelated;
 }
@@ -125,7 +181,7 @@ footer {
   padding-right: 5rem;
   padding-top: 4rem;
   padding-bottom: 5rem;
-  background-color: #38303B;
+  background-color: rgba(106, 89, 117, 0.3);
   color: #E2DBD4;
 }
 
@@ -182,6 +238,9 @@ footer {
   flex-wrap: wrap;
   height: 100%;
   gap: 1rem;
+}
+.social__media p {
+  margin-bottom: 1rem;
 }
 .social__media nav a {
   width: 1.3rem;
