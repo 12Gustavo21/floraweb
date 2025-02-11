@@ -13,40 +13,41 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 
 
 <body>
   <header>
-    <a>
-      <img src="../img/arrow-icon.svg" alt="Arrow icon" draggable="false">
-    </a>
-    <h1>Buquês Favoritos</h1>
-    <a href="carrinho.html" class="actions__cart">
-      <img src="../img/whitecart-icon.svg" alt="Shopping cart icon" draggable="false">
-    </a>
+    <div class="header__details">
+      <img src="../img/Left arrow.svg" alt="Seta para esquerda" onclick="history.back()">
+      <h2>Carrinho</h2>
+    </div>
+    <figure class="header__favorite">
+      <a href="../pages/carrinho.html">
+        <img src="../img/whitecart-icon.svg" alt="Favoritos">
+      </a>
+    </figure>
   </header>
   <main>
     <section class="main__container">
       <div class="main__apresentation">
         <div class="bouquet__card">
-            <a href="favoritos.html" class="actions__favorite">
-             <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
-            </a>
-            <figure>
-             <img src="../img/bouquet six.png" alt="Buquê 1" draggable="false">
-            </figure>
-             <p>Buquê tamanho grande <span>“Aurora de Sonhos”</span>
-            </p>
+          <a href="#" class="actions__favorite">
+            <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
+          </a>
+          <figure>
+            <img src="../img/bouquet eight.png" alt="Buquê 1" draggable="false">
+          </figure>
+          <p>Buquê tamanho grande <span>“Aurora de Sonhos”</span>
+          </p>
           <div>
             <p class="price">R$ 349,99</p>
             <button>Ver buquê</button>
           </div>
         </div>
         <div class="bouquet__card">
-          <a href="favoritos.html" class="actions__favorite">
+          <a href="#" class="actions__favorite">
             <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
           </a>
           <figure>
@@ -59,18 +60,18 @@
           </div>
         </div>
         <div class="bouquet__card">
-          <a href="favoritos.html" class="actions__favorite">
+          <a href="#" class="actions__favorite">
             <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
           </a>
           <figure>
-            <img src="../img/bouquet eight.png" alt="Buquê 3" draggable="false">
+            <img src="../img/bouquet six.png" alt="Buquê 3" draggable="false">
           </figure>
           <p>Buquê tamanho pequeno <span>“Sol Poético”</span></p>
           <div>
             <p class="price">R$ 99,99</p>
             <button>Ver buquê</button>
           </div>
-      </div>
+        </div>
     </section>
   </main>
 
@@ -108,10 +109,6 @@
       <button class="contact__button">Fale conosco</button>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
 </body>
 
 
