@@ -131,7 +131,15 @@ header .header__details h2::after {
 header .header__details h2:hover::after {
   width: 0;
 }
-header .header__favorite img {
+header .header__actions {
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .header__actions .header__favorite img {
   width: 2rem;
   height: 2rem;
 }
@@ -145,6 +153,7 @@ main {
 .main__choose__bouquet,
 .main__inside__house,
 .main__contact,
+.main__all__products,
 footer {
   padding-left: 6.7vw;
 }
@@ -155,6 +164,7 @@ footer {
   .main__choose__bouquet,
   .main__inside__house,
   .main__contact,
+  .main__all__products,
   footer {
     padding-left: 4vw;
   }
