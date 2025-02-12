@@ -124,6 +124,24 @@ header {
   }
 }
 
+@media only screen and (width <= 660px) {
+  header {
+    margin: 3rem 1.5rem 1.5rem 1.5rem;
+
+    .header__details {
+      h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+}
+
+@media only screen and (width <= 660px) {
+  header {
+    margin: 3rem 1rem 1rem 1rem;
+  }
+}
+
 main {
   min-height: 100dvh;
 }
@@ -165,12 +183,33 @@ ul {
 
 footer {
   @include flex(row, space-between, center);
-  height: 40vh;
+  min-height: 40vh;
   padding-right: 5rem;
   padding-top: 4rem;
   padding-bottom: 5rem;
   background-color: rgba(106, 89, 117, 0.3);
   color: $primary-color-2;
+}
+
+@media only screen and (width <= 768px) {
+  footer {
+    flex-direction: column;
+    padding: 4rem 0;
+    gap: 1rem;
+
+    .footer__content,
+    .social__media {
+      width: 100%;
+    }
+
+    .footer__content {
+      align-items: center;
+    }
+
+    .payment__methods {
+      place-items: center;
+    }
+  }
 }
 
 .footer__content {
@@ -252,5 +291,18 @@ footer {
   nav {
     @include flex(row, space-between, center);
     width: 100%;
+  }
+}
+
+.offcanvas {
+  background-color: $primary-color-1 !important;
+
+}
+.offcanvas-body ul {
+  height: 70%;
+  @include flex(column, space-evenly, flex-start);
+
+  a {
+    color: $primary-color-2;
   }
 }

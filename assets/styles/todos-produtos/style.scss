@@ -1,6 +1,19 @@
 @import "../mixins";
 @import "../variables";
 
+@media only screen and (width <= 460px) {
+  header {
+    .header__details {
+      h2 {
+        width: 9rem;
+        font-size: 1.5rem !important;
+
+        @include title__effect__two__lines($secondary-color-3, 0, 8.5rem, 8rem, 1rem);
+      }
+    }
+  }
+}
+
 .main__all__products {
   @include flex(row, space-between, flex-start);
   margin: 4rem 0 7rem 0;
@@ -130,5 +143,50 @@
     img:hover {
       transform: translateY(-1rem);
     }
+  }
+}
+
+@media only screen and (width <= 1200px) {
+  .main__all__products {
+    @include flex(column, center, center);
+
+    .choose__bouquet__content,
+    .choose__bouquet__content h2,
+    .choose__bouquet__list {
+      align-items: center;
+    }
+
+    .choose__bouquet__content {
+      width: 100%;
+
+      h2 {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    .choose__bouquet__list {
+      padding: 2rem 0;
+    }
+
+    .see__all__options {
+      margin-bottom: 2rem;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .bouquet__cards {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (width <= 950px) {
+  .main__all__products .bouquet__cards {
+    padding-right: .5rem;
   }
 }

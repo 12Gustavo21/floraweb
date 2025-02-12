@@ -7,12 +7,19 @@
     gap: 2rem;
 }
 
+@media only screen and (width <= 768px) {
+    .main__apresentation {
+        padding-bottom: 1rem;
+        @include flex(row, center, center);
+    }
+}
+
 .bouquet__card {
     width: 17rem;
     height: 28.25rem;
     @include flex(column, flex-end, center);
     gap: 1rem;
-    background-color: rgba(106, 89, 117, .3);
+    background-color: rgba(106, 89, 117, 0.3);
     color: $secondary-color-1;
     position: relative;
     padding: 1rem 0;

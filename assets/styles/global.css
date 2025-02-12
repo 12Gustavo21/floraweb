@@ -144,6 +144,19 @@ header .header__actions .header__favorite img {
   height: 2rem;
 }
 
+@media only screen and (width <= 660px) {
+  header {
+    margin: 3rem 1.5rem 1.5rem 1.5rem;
+  }
+  header .header__details h2 {
+    font-size: 1.5rem !important;
+  }
+}
+@media only screen and (width <= 660px) {
+  header {
+    margin: 3rem 1rem 1rem 1rem;
+  }
+}
 main {
   min-height: 100dvh;
 }
@@ -187,7 +200,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 40vh;
+  min-height: 40vh;
   padding-right: 5rem;
   padding-top: 4rem;
   padding-bottom: 5rem;
@@ -195,6 +208,23 @@ footer {
   color: #E2DBD4;
 }
 
+@media only screen and (width <= 768px) {
+  footer {
+    flex-direction: column;
+    padding: 4rem 0;
+    gap: 1rem;
+  }
+  footer .footer__content,
+  footer .social__media {
+    width: 100%;
+  }
+  footer .footer__content {
+    align-items: center;
+  }
+  footer .payment__methods {
+    place-items: center;
+  }
+}
 .footer__content {
   display: flex;
   flex-direction: column;
@@ -319,4 +349,20 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.offcanvas {
+  background-color: #38303B !important;
+}
+
+.offcanvas-body ul {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.offcanvas-body ul a {
+  color: #E2DBD4;
 }/*# sourceMappingURL=global.css.map */

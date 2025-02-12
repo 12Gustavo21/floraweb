@@ -8,6 +8,16 @@
   gap: 2rem;
 }
 
+@media only screen and (width <= 768px) {
+  .main__apresentation {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 .bouquet__card {
   width: 17rem;
   height: 28.25rem;
