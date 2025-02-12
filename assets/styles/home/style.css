@@ -413,7 +413,7 @@ span:nth-of-type(3) {
 }
 @media only screen and (width <= 539px) {
   .main__why__floraweb {
-    height: 150vh;
+    height: 135vh;
   }
 }
 @media only screen and (width <= 475px) {
@@ -1028,7 +1028,7 @@ span:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
   .main__contact .info__content .info__details .info__description p {
@@ -1123,6 +1123,98 @@ span:nth-of-type(3) {
   }
   .main__contact .contact__form h2::after, .main__contact .contact__form h2::before {
     height: 0.5rem !important;
+  }
+}
+@media only screen and (width <= 475px) {
+  .main__contact .contact__info .info__content {
+    height: 100%;
+  }
+  .main__contact .contact__info .info__content .info__details {
+    height: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .main__contact .contact__info .info__content .info__details .info__description {
+    width: 100%;
+    gap: 2rem;
+  }
+  .main__contact .contact__info .info__content .info__details .info__description .tiny {
+    width: 60% !important;
+  }
+  .main__contact .contact__info .info__content .info__details .info__items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .main__contact .contact__info figure {
+    right: 0;
+    left: inherit;
+    width: 8rem;
+    height: 11rem;
+  }
+  .main__contact .contact__info figure::after {
+    width: 7rem;
+    height: 7rem;
+    top: 3rem;
+    left: 0;
+  }
+  .main__contact .contact__info .purple__roses {
+    display: none;
+  }
+}
+@media only screen and (width <= 375px) {
+  .main__contact .contact__form {
+    align-items: center;
+  }
+  .main__contact .contact__form h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem !important;
+    z-index: 1;
+  }
+  .main__contact .contact__form h2::after, .main__contact .contact__form h2::before {
+    background-color: #481B68;
+    opacity: 0.3;
+    content: "";
+    position: absolute;
+    height: 0.9rem;
+    left: -0.125rem;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+  .main__contact .contact__form h2::after {
+    width: 6.5rem;
+    bottom: 0;
+  }
+  .main__contact .contact__form h2::before {
+    width: 17rem;
+    top: 0.9rem;
+  }
+  .main__contact .contact__form h2:hover::after {
+    width: 0;
+  }
+  .main__contact .contact__form h2:hover::before {
+    width: 0;
+  }
+  .main__contact .contact__form h2::after, .main__contact .contact__form h2::before {
+    left: inherit;
+  }
+  .main__contact .contact__form p {
+    font-size: 0.9rem !important;
+  }
+  .main__contact .contact__form form {
+    width: 100%;
   }
 }
 .contact__form {
