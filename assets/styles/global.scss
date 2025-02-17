@@ -294,10 +294,23 @@ footer {
   }
 }
 
+.header.visible {
+  .offcanvas-backdrop.show {
+    top: -9px !important;
+    left: -9px !important;
+  }
+
+  .offcanvas.offcanvas-end {
+    height: 100vh;
+    right: -11px;
+    top: -9px;
+  }
+}
+
 .offcanvas {
   background-color: $primary-color-1 !important;
-
 }
+
 .offcanvas-body ul {
   height: 70%;
   @include flex(column, space-evenly, flex-start);

@@ -351,6 +351,16 @@ footer {
   width: 100%;
 }
 
+.header.visible .offcanvas-backdrop.show {
+  top: -9px !important;
+  left: -9px !important;
+}
+.header.visible .offcanvas.offcanvas-end {
+  height: 100vh;
+  right: -11px;
+  top: -9px;
+}
+
 .offcanvas {
   background-color: #38303B !important;
 }
