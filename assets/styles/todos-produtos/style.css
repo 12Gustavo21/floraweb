@@ -1,3 +1,7 @@
+body {
+  background-color: #38303B;
+}
+
 @media only screen and (width <= 460px) {
   header .header__details h2 {
     width: 9rem;

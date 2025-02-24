@@ -6,11 +6,9 @@ body {
 }
 
 .main__cart {
-  padding-bottom: 4rem;
-
   .card {
     border-radius: 1rem;
-    background-color: $secondary-color-3;
+    background-color: #473d4c;
     color: $primary-color-2;
 
     i {
@@ -36,6 +34,10 @@ body {
       &::before {
         border-radius: 0;
       }
+
+      &:hover {
+        color: $primary-color-1 !important;
+      }
     }
 
     .form-control::placeholder {
@@ -43,7 +45,18 @@ body {
       color: $primary-color-2;
     }
 
-    @include button-transition($secondary-color-3, $primary-color-1);
+    @include button-transition($primary-color-1, $primary-color-2);
+  }
+
+  .help {
+    button {
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      transition: $default-transition;
+      border: .01rem solid $primary-color-2;
+    }
+    @include button-transition(transparent, $secondary-color-3);
   }
 }
 

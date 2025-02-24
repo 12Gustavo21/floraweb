@@ -2,12 +2,9 @@ body {
   background-color: #38303B !important;
 }
 
-.main__cart {
-  padding-bottom: 4rem;
-}
 .main__cart .card {
   border-radius: 1rem;
-  background-color: #6A5975;
+  background-color: #473d4c;
   color: #E2DBD4;
 }
 .main__cart .card i {
@@ -29,6 +26,9 @@ body {
 .main__cart .card .btn-payment::after, .main__cart .card .btn-payment::before {
   border-radius: 0;
 }
+.main__cart .card .btn-payment:hover {
+  color: #38303B !important;
+}
 .main__cart .card .form-control::-moz-placeholder {
   font-size: 1rem;
   color: #E2DBD4;
@@ -44,7 +44,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #6A5975;
+  background-color: #38303B;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -55,13 +55,47 @@ body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #38303B;
+  background-color: #E2DBD4;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
 .main__cart .card button:hover:before {
+  width: 100%;
+}
+.main__cart .help button {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border: 0.01rem solid #E2DBD4;
+}
+.main__cart .help button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.main__cart .help button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #6A5975;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.main__cart .help button:hover:before {
   width: 100%;
 }
 
