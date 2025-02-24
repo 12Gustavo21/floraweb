@@ -1,40 +1,14 @@
-.main__apresentation {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
+body {
+  background-color: #38303B !important;
 }
 
-@media only screen and (width <= 768px) {
-  .main__apresentation {
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
 .bouquet__card {
   width: 17rem;
   height: 28.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
   background-color: rgba(106, 89, 117, 0.3);
-  color: #2B0F39;
-  position: relative;
-  padding: 1rem 0;
   color: #E2DBD4;
 }
 .bouquet__card .actions__favorite {
-  position: absolute;
   right: 1rem;
   top: 1rem;
 }
@@ -72,6 +46,7 @@
   transform: rotate(20deg);
 }
 .bouquet__card p {
+  margin: 0 !important;
   font-size: 0.8rem;
   text-align: center;
   display: flex;

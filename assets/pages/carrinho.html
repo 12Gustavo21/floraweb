@@ -13,6 +13,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -29,116 +32,115 @@
   </header>
 
   <main class="main__cart">
-    <section class="cart__content">
-      <article class="cart__details">
-        <table>
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Preço</th>
-              <th>Quantidade</th>
-              <th>Preço Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="product">
-                  <figure>
-                    <div class="image">
-                      <img src="../img/bouquet one.png" alt="Buquê grande">
+    <section class="h-100 h-custom">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card card-registration card-registration-2">
+              <div class="card-body p-0">
+                <div class="row g-0">
+                  <div class="col-lg-8">
+                    <div class="p-5">
+                      <div class="d-flex justify-content-between align-items-center mb-5">
+                        <h1 class="fw-bold mb-0">Produtos</h1>
+                        <h6 class="mb-0">2 items</h6>
+                      </div>
+                      <hr class="my-4">
+                      <div class="row mb-4 d-flex justify-content-between align-items-center">
+                        <div class="col-md-2 col-lg-2 col-xl-2">
+                          <img src="../img/bouquet one.png" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                          <h6 class="text-muted">Buquê grande</h6>
+                          <h6 class="mb-0">Noite de Primavera</h6>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link p-0"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm bg-transparent text-white border-0 text-center mx-2" />
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link p-0"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h6 class="mb-0">R$ 429,99</h6>
+                        </div>
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                          <a href="#" class="text-muted"><i class="fas fa-times"></i></a>
+                        </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="row mb-4 d-flex justify-content-between align-items-center">
+                        <div class="col-md-2 col-lg-2 col-xl-2">
+                          <img src="../img/bouquet six.png" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                          <h6 class="text-muted">Buquê pequeno</h6>
+                          <h6 class="mb-0">Sol Poético</h6>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link p-0"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm bg-transparent text-white border-0 text-center mx-2" />
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link p-0"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h6 class="mb-0">R$ 99,99</h6>
+                        </div>
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                          <a href="#" class="text-muted"><i class="fas fa-times"></i></a>
+                        </div>
+                      </div>
+                      <hr class="my-4">
                     </div>
-                    <figcaption>Buquê grande
-                      <span>
-                        Noite de Primavera
-                      </span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </td>
-              <td class="price">R$ 429,99</td>
-              <td>
-                <div class="qty">
-                  <button class="less" aria-label="Diminuir quantidade">
-                    <span class="line"></span>
-                  </button>
-                  <span>1</span>
-                  <button class="more" aria-label="Aumentar quantidade">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </td>
-              <td class="total__price">R$ 429,99</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-                  <figure>
-                    <div class="image">
-                      <img src="../img/bouquet six.png" alt="Buquê pequeno">
+                  </div>
+                  <div class="col-lg-4" style="background-color: rgba(72, 27, 104, .3);">
+                    <div class="p-5">
+                      <h3 class="fw-bold mb-5 mt-2 pt-1">Ressumo</h3>
+                      <hr class="my-4">
+                      <div class="d-flex justify-content-between mb-4">
+                        <h5 class="text-uppercase">items 2</h5>
+                        <h5>R$ 529,98</h5>
+                      </div>
+                      <h5 class="text-uppercase mb-3">Entrega</h5>
+                      <div class="mb-4 pb-2 w-100">
+                        <select data-mdb-select-init class="w-100 p-2 bg-transparent border-white text-white rounded-2">
+                          <option value="1">Entrega padrão - R$ 10,00</option>
+                          <option value="2">Entrega expressa - R$ 15,00</option>
+                          <option value="3">Retirada</option>
+                        </select>
+                      </div>
+                      <h5 class="text-uppercase mb-3">Codigo do cupom</h5>
+                      <div class="mb-5">
+                        <div data-mdb-input-init class="form-outline">
+                          <input type="text" class="form-control form-control-lg bg-transparent text-white fs-6"
+                            placeholder="Digite seu código de desconto" />
+                        </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="d-flex justify-content-between mb-5">
+                        <h5 class="text-uppercase">Preço total</h5>
+                        <h5>R$ 539,98</h5>
+                      </div>
+                      <button class="btn btn-payment w-100 py-2 text-white">Continuar para pagamento</button>
                     </div>
-                    <figcaption>Buquê pequeno
-                      <span>
-                        Sol Poético
-                      </span>
-                    </figcaption>
-                  </figure>
+                  </div>
                 </div>
-              </td>
-              <td class="price">R$ 99,99</td>
-              <td>
-                <div class="qty">
-                  <button class="less" aria-label="Diminuir quantidade">
-                    <span class="line"></span>
-                  </button>
-                  <span>2</span>
-                  <button class="more" aria-label="Aumentar quantidade">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                  </button>
-                </div>
-              </td>
-              <td class="total__price">R$ 199,98</td>
-            </tr>
-          </tbody>
-        </table>
-        <section class="help">
-          <h2>Precisa de ajuda?</h2>
-          <p>Você pode corrigir seu problema rapidamente aqui. Se não, conectaremos você com alguém que possa ajudá-lo.
-          </p>
-          <button>Acessar o serviço de atendimento ao cliente</button>
-        </section>
-      </article>
-      <aside class="cart__summary">
-        <section class="shipping">
-          <h3>Calcular Frete</h3>
-          <input id="cep" type="text" placeholder="Digite seu CEP">
-          <div class="address__inputs">
-            <input id="reference" type="text" placeholder="Ponto de referência">
-            <input id="number" type="text" placeholder="Número">
+              </div>
+            </div>
           </div>
-          <button>Calcular</button>
-        </section>
-        <section class="discount">
-          <h3>Código do Cupom</h3>
-          <p>Digite seu código promocional aqui e aproveite descontos especiais em nossas flores e presentes
-            encantadores.</p>
-          <div class="cupom">
-            <input id="cupom" type="text" placeholder="Digite seu código">
-            <button>Aplicar</button>
-          </div>
-        </section>
-        <section class="purchase__summary">
-          <h3>Resumo da Compra</h3>
-          <p><span>Subtotal da compra:</span> R$ 629,97</p>
-          <p><span>Frete:</span> Grátis</p>
-          <p><span>Desconto:</span> -R$ 20</p>
-          <p><span>Total a compra:</span> R$ 609,97</p>
-          <button>Comprar</button>
-        </section>
-      </aside>
-
+        </div>
+      </div>
     </section>
   </main>
 
@@ -166,6 +168,9 @@
       <button class="contact__button">Fale conosco</button>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

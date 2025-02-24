@@ -1,32 +1,17 @@
 @import "../mixins";
 @import "../variables";
 
-.main__apresentation {
-    width: 100%;
-    @include flex(row, flex-start, flex-start);
-    gap: 2rem;
-}
-
-@media only screen and (width <= 768px) {
-    .main__apresentation {
-        padding-bottom: 1rem;
-        @include flex(row, center, center);
-    }
+body {
+    background-color: $primary-color-1 !important;
 }
 
 .bouquet__card {
     width: 17rem;
     height: 28.25rem;
-    @include flex(column, flex-end, center);
-    gap: 1rem;
     background-color: rgba(106, 89, 117, 0.3);
-    color: $secondary-color-1;
-    position: relative;
-    padding: 1rem 0;
     color: $primary-color-2;
 
     .actions__favorite {
-        position: absolute;
         right: 1rem;
         top: 1rem;
     }
@@ -64,6 +49,7 @@
     }
 
     p {
+        margin: 0 !important;
         font-size: 0.8rem;
         text-align: center;
         @include flex(column, center, center);

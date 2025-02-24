@@ -17,10 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  background-color: $primary-color-1;
-}
-
 ::-webkit-scrollbar {
   background-color: $secondary-color-1;
 }
@@ -39,7 +35,9 @@ body {
 a,
 button,
 li,
-a img {
+a img,
+select,
+input {
   cursor: url(../cursors/pointer.cur), pointer !important;
 }
 
@@ -296,7 +294,6 @@ footer {
 
 .offcanvas {
   background-color: $primary-color-1 !important;
-
 }
 .offcanvas-body ul {
   height: 70%;
