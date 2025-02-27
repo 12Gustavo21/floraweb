@@ -12,6 +12,7 @@ _Technologies_
 + Css3 <img width="15px" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" />
 + SASS 🎨
 + AOS (Animate On Scroll) 📈
++ Bootstrap <img width="15px" src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" />
 
 ### How to use
 
