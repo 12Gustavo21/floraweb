@@ -396,7 +396,7 @@ span:nth-of-type(3) {
   margin: 4rem 0 7rem 0;
 }
 
-@media only screen and (width <= 1200px) {
+@media only screen and (width <= 1310px) {
   .main__choose__bouquet {
     @include flex(column, center, center);
 
@@ -499,75 +499,22 @@ span:nth-of-type(3) {
   @include button-transition(transparent, $secondary-color-1);
 }
 
-.bouquet__cards {
-  width: 75%;
-  height: 100%;
-  @include flex(row, flex-end, center);
-  padding-right: 3rem;
-  gap: 1.5rem;
-}
-
 .bouquet__card {
-  width: 17rem;
-  height: 23.25rem;
-  @include flex(column, space-between, center);
-  gap: 1rem;
   background-color: $secondary-color-5;
   color: $secondary-color-1;
-  position: relative;
-  padding: 1rem 0;
 
   figure {
-    position: absolute;
-    top: 3.5rem;
-    width: 14rem;
-    height: 13rem;
-    @include flex(row, center, center);
-
     &::after {
-      content: "";
-      position: absolute;
-      width: 9.5rem;
-      height: 9.5rem;
-      top: 2rem;
       background-color: $secondary-color-4;
-      border-radius: 100%;
-      z-index: 0;
     }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: relative;
-      z-index: 1;
-      transition: $default-transition;
-
-      &:hover {
-        transform: rotate(20deg);
-      }
-    }
-  }
-
-  p {
-    font-size: 0.8rem;
-    text-align: center;
-    @include flex(column, center, center);
-  }
-
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
   }
 
   button {
-    width: 12rem;
-    height: 3.5rem;
-    border-radius: 4rem;
     color: $secondary-color-4;
-    overflow: hidden;
-    z-index: 1;
-    position: relative;
+
+    &:hover {
+      color: $secondary-color-4;
+    }
   }
 
   @include button-transition($secondary-color-2, $secondary-color-1);
@@ -579,30 +526,36 @@ span:nth-of-type(3) {
 
 @media only screen and (width <= 950px) {
   .bouquet__cards {
-    padding-right: 2rem;
-    gap: 2rem;
     .bouquet__card.bigger {
       width: 17rem;
-      height: 23.25rem;
-      @include flex(column, space-between, center);
-      padding: 1rem 0;
+      height: 28.25rem;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 1rem 0 !important;
 
       figure {
-        top: 3.5rem;
-        width: 14rem;
-        height: 13rem;
+        top: 4rem !important;
 
         &::after {
           content: "";
           position: absolute;
-          width: 9.5rem;
-          height: 9.5rem;
+          width: 11.5rem;
+          height: 11.5rem;
           top: 2rem;
         }
       }
 
+      div {
+        flex-direction: column !important;
+      }
+
+      a {
+        padding-right: 1rem !important;
+        right: 0 !important;
+      }
+
       .bouquet__description {
-        display: none;
+        display: none !important;
       }
     }
   }
@@ -614,49 +567,21 @@ span:nth-of-type(3) {
 }
 
 .bouquet__card:nth-child(4) {
-  @include flex(column, flex-start, flex-start);
-  padding-left: 2rem;
   gap: 4.5rem;
-  position: relative;
 
   figure {
-    right: 0;
-    top: 0;
-
     img {
       &:hover {
         transform: translateY(-1rem);
       }
     }
   }
-
-  p {
-    @include flex(column, center, flex-start);
-    text-align: left;
-  }
-
-  .bouquet__description {
-    font-weight: lighter;
-    top: 4.5rem;
-    position: absolute;
-  }
-
-  div {
-    @include flex(row-reverse, center, center);
-    gap: 1rem;
-
-    .price {
-      margin: 0 !important;
-    }
-  }
 }
 
 .bouquet__card:nth-child(5) {
   figure {
-    top: 4.5rem;
     width: 9.5rem;
     height: 9.5rem;
-    overflow: hidden;
 
     &::after {
       width: 9rem;
@@ -764,7 +689,7 @@ span:nth-of-type(3) {
   .main__contact {
     .contact__form {
       h2 {
-        font-size: 2.5rem !important; 
+        font-size: 2.5rem !important;
         @include title__effect__two__lines($secondary-color-2, 0, 32.5rem, 16rem, 1.9rem);
       }
     }
@@ -932,7 +857,7 @@ span:nth-of-type(3) {
       h2 {
         @include flex(column, center, center);
         font-size: 1.2rem !important;
-        @include title__effect__two__lines($secondary-color-2, 0, 6.5rem, 17rem, .9rem);
+        @include title__effect__two__lines($secondary-color-2, 0, 6.5rem, 17rem, 0.9rem);
 
         &::after,
         &::before {
@@ -941,7 +866,7 @@ span:nth-of-type(3) {
       }
 
       p {
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
       }
 
       form {

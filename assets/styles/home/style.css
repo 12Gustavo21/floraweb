@@ -504,7 +504,7 @@ span:nth-of-type(3) {
   margin: 4rem 0 7rem 0;
 }
 
-@media only screen and (width <= 1200px) {
+@media only screen and (width <= 1310px) {
   .main__choose__bouquet {
     display: flex;
     flex-direction: column;
@@ -660,86 +660,18 @@ span:nth-of-type(3) {
   width: 100%;
 }
 
-.bouquet__cards {
-  width: 75%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-right: 3rem;
-  gap: 1.5rem;
-}
-
 .bouquet__card {
-  width: 17rem;
-  height: 23.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
   background-color: #D0C5C8;
   color: #2B0F39;
-  position: relative;
-  padding: 1rem 0;
-}
-.bouquet__card figure {
-  position: absolute;
-  top: 3.5rem;
-  width: 14rem;
-  height: 13rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 .bouquet__card figure::after {
-  content: "";
-  position: absolute;
-  width: 9.5rem;
-  height: 9.5rem;
-  top: 2rem;
   background-color: #C2B4BE;
-  border-radius: 100%;
-  z-index: 0;
-}
-.bouquet__card figure img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-}
-.bouquet__card figure img:hover {
-  transform: rotate(20deg);
-}
-.bouquet__card p {
-  font-size: 0.8rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.bouquet__card .price {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 .bouquet__card button {
-  width: 12rem;
-  height: 3.5rem;
-  border-radius: 4rem;
   color: #C2B4BE;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
+}
+.bouquet__card button:hover {
+  color: #C2B4BE;
 }
 .bouquet__card button:after {
   content: "";
@@ -774,34 +706,32 @@ span:nth-of-type(3) {
 }
 
 @media only screen and (width <= 950px) {
-  .bouquet__cards {
-    padding-right: 2rem;
-    gap: 2rem;
-  }
   .bouquet__cards .bouquet__card.bigger {
     width: 17rem;
-    height: 23.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 0;
+    height: 28.25rem;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 1rem 0 !important;
   }
   .bouquet__cards .bouquet__card.bigger figure {
-    top: 3.5rem;
-    width: 14rem;
-    height: 13rem;
+    top: 4rem !important;
   }
   .bouquet__cards .bouquet__card.bigger figure::after {
     content: "";
     position: absolute;
-    width: 9.5rem;
-    height: 9.5rem;
+    width: 11.5rem;
+    height: 11.5rem;
     top: 2rem;
   }
+  .bouquet__cards .bouquet__card.bigger div {
+    flex-direction: column !important;
+  }
+  .bouquet__cards .bouquet__card.bigger a {
+    padding-right: 1rem !important;
+    right: 0 !important;
+  }
   .bouquet__cards .bouquet__card.bigger .bouquet__description {
-    display: none;
+    display: none !important;
   }
 }
 .bouquet__card:nth-child(4),
@@ -810,52 +740,15 @@ span:nth-of-type(3) {
 }
 
 .bouquet__card:nth-child(4) {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding-left: 2rem;
   gap: 4.5rem;
-  position: relative;
-}
-.bouquet__card:nth-child(4) figure {
-  right: 0;
-  top: 0;
 }
 .bouquet__card:nth-child(4) figure img:hover {
   transform: translateY(-1rem);
 }
-.bouquet__card:nth-child(4) p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  text-align: left;
-}
-.bouquet__card:nth-child(4) .bouquet__description {
-  font-weight: lighter;
-  top: 4.5rem;
-  position: absolute;
-}
-.bouquet__card:nth-child(4) div {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.bouquet__card:nth-child(4) div .price {
-  margin: 0 !important;
-}
 
 .bouquet__card:nth-child(5) figure {
-  top: 4.5rem;
   width: 9.5rem;
   height: 9.5rem;
-  overflow: hidden;
 }
 .bouquet__card:nth-child(5) figure::after {
   width: 9rem;

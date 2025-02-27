@@ -312,3 +312,49 @@ footer {
     color: $primary-color-2;
   }
 }
+
+.bouquet__card {
+  width: 17rem;
+  height: 28.25rem;
+  background-color: rgba(106, 89, 117, 0.3);
+  color: $primary-color-2;
+
+  figure {
+    width: 16rem;
+    height: 15rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10.5rem;
+      height: 10.5rem;
+      top: 2rem;
+      background-color: $primary-color-1;
+      border-radius: 100%;
+      z-index: 0;
+    }
+
+    img {
+      transition: $default-transition;
+
+      &:hover {
+        transform: rotate(20deg);
+      }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    color: $secondary-color-4;
+    transition: $default-transition;
+
+    &:hover {
+      color: $primary-color-1;
+    }
+  }
+
+  @include button-transition($primary-color-1, $secondary-color-5);
+}

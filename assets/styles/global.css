@@ -369,4 +369,68 @@ footer {
 }
 .offcanvas-body ul a {
   color: #E2DBD4;
+}
+
+.bouquet__card {
+  width: 17rem;
+  height: 28.25rem;
+  background-color: rgba(106, 89, 117, 0.3);
+  color: #E2DBD4;
+}
+.bouquet__card figure {
+  width: 16rem;
+  height: 15rem;
+}
+.bouquet__card figure::after {
+  content: "";
+  position: absolute;
+  width: 10.5rem;
+  height: 10.5rem;
+  top: 2rem;
+  background-color: #38303B;
+  border-radius: 100%;
+  z-index: 0;
+}
+.bouquet__card figure img {
+  transition: all 0.3s ease-in-out;
+}
+.bouquet__card figure img:hover {
+  transform: rotate(20deg);
+}
+.bouquet__card p {
+  font-size: 0.8rem;
+}
+.bouquet__card button {
+  color: #C2B4BE;
+  transition: all 0.3s ease-in-out;
+}
+.bouquet__card button:hover {
+  color: #38303B;
+}
+.bouquet__card button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #38303B;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.bouquet__card button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #D0C5C8;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.bouquet__card button:hover:before {
+  width: 100%;
 }/*# sourceMappingURL=global.css.map */

@@ -1,5 +1,5 @@
 body {
-  background-color: #38303B;
+  background-color: #38303B !important;
 }
 
 @media only screen and (width <= 460px) {
@@ -123,114 +123,8 @@ body {
   gap: 1.5rem;
 }
 
-.bouquet__card {
-  width: 18rem;
-  height: 28.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background-color: rgba(106, 89, 117, 0.3);
-  color: #2B0F39;
-  position: relative;
-  padding: 1rem 0;
-  color: #E2DBD4;
-}
-.bouquet__card figure {
-  position: absolute;
-  top: 2rem;
-  width: 16rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.bouquet__card figure::after {
-  content: "";
-  position: absolute;
-  width: 10.5rem;
-  height: 10.5rem;
-  top: 2rem;
-  background-color: #38303B;
-  border-radius: 100%;
-  z-index: 0;
-}
-.bouquet__card figure img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-}
-.bouquet__card figure img:hover {
-  transform: rotate(20deg);
-}
-.bouquet__card p {
-  font-size: 0.8rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.bouquet__card .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-.bouquet__card button {
-  width: 12rem;
-  height: 3.5rem;
-  border-radius: 4rem;
-  color: #C2B4BE;
-  margin-top: 1rem;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-.bouquet__card button:hover {
-  color: #38303B;
-}
-.bouquet__card button:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #38303B;
-  border-radius: 10rem;
-  z-index: -2;
-}
-.bouquet__card button:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #D0C5C8;
-  transition: all 0.3s;
-  border-radius: 10rem;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
-}
-.bouquet__card button:hover:before {
-  width: 100%;
-}
-
-.bouquet__card:nth-child(4) figure {
-  right: 0;
-}
 .bouquet__card:nth-child(4) figure img:hover {
-  transform: translateY(-1rem);
+  transform: translateY(1rem);
 }
 
 @media only screen and (width <= 1200px) {
