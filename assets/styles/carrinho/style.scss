@@ -55,6 +55,7 @@ body {
       position: relative;
       transition: $default-transition;
       border: .01rem solid $primary-color-2;
+      border-radius: 15rem !important;
     }
     @include button-transition(transparent, $secondary-color-3);
   }

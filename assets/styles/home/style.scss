@@ -2,26 +2,20 @@
 @import "../variables";
 
 .header {
-  width: 100%;
   height: 10vh;
-  position: fixed;
   inset: 0;
-  z-index: 99;
   transition: $default-transition;
-  margin: 0;
-  padding: 0;
-  border: none;
 }
 
 .header.visible {
-  width: 98%;
+  width: 98% !important;
   top: 0;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 0.5rem 0 0 0.5rem !important;
   background: rgba(226, 219, 212, 0.3);
   border-radius: 1rem;
   box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0.3125rem);
-  border: 0.0625rem solid rgba(226, 219, 212, 0.4);
+  border: 0.0625rem solid rgba(226, 219, 212, 0.4) !important;
 }
 
 .header.hidden {
@@ -29,9 +23,7 @@
 }
 
 .header__container {
-  width: 100%;
-  height: 100%;
-  @include flex(row, space-around, center);
+  justify-content: space-around;
 }
 
 @media only screen and (width <= 900px) {
@@ -53,15 +45,9 @@
 
 .list__box {
   width: 45%;
-  height: 100%;
-  @include flex(row, center, center);
+  display: flex;
 
   ul {
-    width: 100%;
-    list-style: none;
-    @include flex(row, space-between, center);
-    margin: 0;
-
     li {
       transition: $default-transition;
       &:hover {
@@ -97,11 +83,9 @@
 }
 
 .burger {
-  position: relative;
-  width: 30px;
-  height: 20px;
+  width: 1.875rem;
+  height: 1.25rem;
   background: transparent;
-
   display: none;
 }
 
@@ -147,12 +131,10 @@ span:nth-of-type(3) {
 
 .actions {
   width: 5rem;
-  @include flex(row, space-between, center);
 }
 
 @media only screen and (width <= 900px) {
   .actions {
-    gap: 1rem;
     min-width: 20%;
     width: auto;
   }
@@ -171,7 +153,7 @@ span:nth-of-type(3) {
   width: 100%;
   height: 100dvh;
   @include flex(row, flex-start, center);
-  background: url(../../img/background.png) no-repeat center center/cover;
+  background: url(../../img/background.webp) no-repeat center center/cover;
 }
 
 @media only screen and (width <= 1150px) {
@@ -291,7 +273,7 @@ span:nth-of-type(3) {
 .main__why__floraweb {
   height: 50vh;
   color: $primary-color-2;
-  background: url(../../img/lavender.png) no-repeat right center/contain;
+  background: url(../../img/lavender.webp) no-repeat right center/contain;
   background-color: $primary-color-1;
 }
 
@@ -428,11 +410,6 @@ span:nth-of-type(3) {
         text-align: center;
       }
     }
-
-    .bouquet__cards {
-      width: 100%;
-      justify-content: center;
-    }
   }
 }
 
@@ -524,39 +501,45 @@ span:nth-of-type(3) {
   width: 35.5rem;
 }
 
-@media only screen and (width <= 950px) {
-  .bouquet__cards {
-    .bouquet__card.bigger {
-      width: 17rem;
-      height: 28.25rem;
+@media only screen and (width <= 1232px) {
+  .bouquet__card:nth-child(4) {
+    width: 17rem;
+    height: 28.25rem !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 1rem 0 !important;
+
+    figure {
+      top: 2rem !important;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 11.5rem;
+        height: 11.5rem;
+        top: 2rem;
+      }
+    }
+
+    div {
+      flex-direction: column !important;
+      position: absolute;
+      bottom: 1rem;
+    }
+
+    a {
+      padding-right: 1rem !important;
+      right: 0 !important;
+    }
+
+    .title {
       align-items: center !important;
-      justify-content: space-between !important;
-      padding: 1rem 0 !important;
+      position: absolute;
+      bottom: 7rem;
+    }
 
-      figure {
-        top: 4rem !important;
-
-        &::after {
-          content: "";
-          position: absolute;
-          width: 11.5rem;
-          height: 11.5rem;
-          top: 2rem;
-        }
-      }
-
-      div {
-        flex-direction: column !important;
-      }
-
-      a {
-        padding-right: 1rem !important;
-        right: 0 !important;
-      }
-
-      .bouquet__description {
-        display: none !important;
-      }
+    .bouquet__description {
+      display: none !important;
     }
   }
 }
@@ -1022,7 +1005,7 @@ span:nth-of-type(3) {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(../../img/purple-roses.png) no-repeat center/cover;
+  background: url(../../img/purple-roses.webp) no-repeat center/cover;
 }
 
 footer {

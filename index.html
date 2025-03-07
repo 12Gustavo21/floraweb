@@ -18,15 +18,13 @@
 </head>
 
 <body>
-  <header class="header">
-    <section class="header__container">
-      <div class="title__box">
-        <a href="#">
-          <img src="./assets/img/logo.svg" alt="FloraWeb logo" draggable="false">
-        </a>
-      </div>
-      <div class="list__box">
-        <ul>
+  <header class="header w-100 vh-10 position-fixed z-3 m-0 p-0 border-0">
+    <section class="header__container w-100 h-100 d-flex flex-row align-items-center">
+      <a href="#">
+        <img src="./assets/img/logo.svg" alt="FloraWeb logo" draggable="false">
+      </a>
+      <div class="list__box h-100 justify-content-center align-items-center">
+        <ul class="w-100 m-0 d-flex justify-content-between align-items-center">
           <li><a href="#encomende-buque">Encomende seu buquê</a></li>
           <li><a href="#localizacao">Localização</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -46,8 +44,8 @@
           </ul>
         </div>
       </div>
-      <div class="actions">
-        <div class="burger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <div class="actions d-flex justify-content-between align-items-center gap-3">
+        <div class="burger position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <span></span>
           <span></span>
           <span></span>
@@ -119,14 +117,14 @@
           </div>
         </div>
         <div
-          class="w-75 h-100 d-flex flex-wrap flex-row justify-content-lg-end justify-content-center align-items-center pe-lg-4 pe-0 gap-4">
+          class="w-75 h-100 d-flex flex-wrap flex-row justify-content-center align-items-center pe-lg-4 pe-0 gap-4">
           <div
             class="bouquet__card text-center py-3 position-relative gap-3 d-flex justify-content-end align-items-center flex-column">
             <a href="#" class="position-absolute end-0 top-0 mt-3 z-1 w-25">
               <img src="./assets/img/favorite.svg" alt="Favorite icon" draggable="false" class="w-50 h-50">
             </a>
             <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4">
-              <img src="./assets/img/bouquet one.png" alt="Buquê 1" draggable="false"
+              <img src="./assets/img/bouquet one.webp" alt="Buquê 1" draggable="false"
                 class="w-100 h-100 position-relative z-1 object-fit-cover">
             </figure>
             <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">Buquê tamanho
@@ -145,7 +143,7 @@
             </a>
             <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4"
               style="transform: rotate(-10deg);">
-              <img src="./assets/img/bouquet two.png" alt="Buquê 2" draggable="false"
+              <img src="./assets/img/bouquet two.webp" alt="Buquê 2" draggable="false"
                 class="w-100 h-100 position-relative z-1 object-fit-contain ms-3">
             </figure>
             <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">
@@ -162,7 +160,7 @@
               <img src="./assets/img/favorite.svg" alt="Favorite icon" draggable="false" class="w-50 h-50">
             </a>
             <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4">
-              <img src="./assets/img/bouquet three.png" alt="Buquê 3" draggable="false"
+              <img src="./assets/img/bouquet three.webp" alt="Buquê 3" draggable="false"
                 class="w-100 h-100 position-relative z-1 object-fit-cover">
             </figure>
             <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">Buquê de flores
@@ -176,8 +174,9 @@
           </div>
           <div
             class="bouquet__card bigger pt-3 ps-4 d-flex flex-column justify-content-start align-items-start position-relative">
-            <p class="text-left d-flex flex-column justify-content-center align-items-start">Buquê tamanho família
-              <span>“Magia da Ternura”</span></p>
+            <p class="text-left d-flex flex-column justify-content-center align-items-start title">Buquê tamanho família
+              <span>“Magia da Ternura”</span>
+            </p>
             <p
               class="bouquet__description position-absolute mt-5 pt-2 text-left d-flex flex-column justify-content-center align-items-start fw-lighter">
               Buquê tamanho família, 15 <span>peças. As flores em destaque são:</span>
@@ -190,7 +189,7 @@
               <button class="px-5 py-3 rounded-5 mt-1 overflow-hidden z-1 position-relative">Ver buquê</button>
             </div>
             <figure class="d-flex justify-content-center align-items-center position-absolute top-0 end-0">
-              <img src="./assets/img/bouquet four.png" alt="Buquê 4" draggable="false"
+              <img src="./assets/img/bouquet four.webp" alt="Buquê 4" draggable="false"
                 class="w-100 h-100 position-relative z-1 object-fit-cover">
             </figure>
           </div>
@@ -199,7 +198,7 @@
               Buquês com cravos e rosas com até 30% de desconto</p>
             <figure
               class="d-flex justify-content-center align-items-center position-absolute bottom-0 ms-5 overflow-hidden bottom-0 mb-0">
-              <img src="./assets/img/bouquet five.png" alt="Buquê 5" draggable="false"
+              <img src="./assets/img/bouquet five.webp" alt="Buquê 5" draggable="false"
                 class="w-100 h-100 position-relative z-1 object-fit-cover">
             </figure>
           </div>
@@ -215,17 +214,17 @@
           Nossas flores dentro <span>da sua casa</span>
         </h2>
         <div class="inside__house__places">
-          <figure><img src="./assets/img/place one.png"
+          <figure><img src="./assets/img/place one.webp"
               alt="Vaso branco com flores roxas em uma mesa ao lado de um quadro e velas"></figure>
-          <figure> <img src="./assets/img/place two.png"
+          <figure> <img src="./assets/img/place two.webp"
               alt="Quarto aconchegante com cama rosa e vaso grande de flores delicadas sobre a cômoda"></figure>
-          <figure><img src="./assets/img/place three.png"
+          <figure><img src="./assets/img/place three.webp"
               alt="Buquê de narcisos amarelos em um vaso de vidro com a luz do pôr do sol ao fundo"></figure>
-          <figure><img src="./assets/img/place four.png"
+          <figure><img src="./assets/img/place four.webp"
               alt="Pequeno vaso de vidro com lavandas sobre uma mesa de madeira ao lado de óculos e livros"></figure>
-          <figure><img src="./assets/img/place five.png"
+          <figure><img src="./assets/img/place five.webp"
               alt="Quarto com tons suaves e um vaso com tulipas verdes sobre um criado-mudo"></figure>
-          <figure><img src="./assets/img/place six.png"
+          <figure><img src="./assets/img/place six.webp"
               alt="Vaso de vidro com peônias rosa sobre uma mesa escura decorada com livros e quadros na parede">
           </figure>
         </div>
@@ -273,7 +272,7 @@
             </div>
           </div>
           <figure>
-            <img src="./assets/img/bouquet contact.png" alt="Buquê de contato" draggable="false">
+            <img src="./assets/img/bouquet contact.webp" alt="Buquê de contato" draggable="false">
           </figure>
           <div class="purple__roses"></div>
         </div>

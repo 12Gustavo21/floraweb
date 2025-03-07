@@ -70,6 +70,7 @@ body {
   position: relative;
   transition: all 0.3s ease-in-out;
   border: 0.01rem solid #E2DBD4;
+  border-radius: 15rem !important;
 }
 .main__cart .help button:after {
   content: "";
