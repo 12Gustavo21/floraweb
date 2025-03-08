@@ -1,0 +1,122 @@
+body {
+  background-color: #38303B !important;
+}
+
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-darker {
+  background-color: #2a242d !important;
+}
+
+.bg-purple {
+  background-color: rgba(72, 27, 104, 0.25) !important;
+}
+
+.border-purple {
+  border: 0.01rem solid #6A5975 !important;
+}
+
+.text-purple {
+  color: #8b21e2 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.15rem #C2B4BE !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  background-color: #343038 !important;
+}
+
+.btn-cart button {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border: 0.01rem solid #E2DBD4;
+  border-radius: 15rem !important;
+}
+.btn-cart button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.btn-cart button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #2B0F39;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.btn-cart button:hover:before {
+  width: 100%;
+}
+
+.btn-favorite button {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15rem !important;
+}
+.btn-favorite button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C2B4BE;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.btn-favorite button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #2B0F39;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.btn-favorite button:hover:before {
+  width: 100%;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 0 !important;
+}/*# sourceMappingURL=style.css.map */

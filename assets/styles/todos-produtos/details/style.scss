@@ -1,0 +1,79 @@
+@import "../../variables";
+@import "../../mixins";
+
+body {
+  background-color: $primary-color-1 !important;
+}
+
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: $default-transition;
+}
+
+.bg-darker {
+  background-color: #2a242d !important;
+}
+
+.bg-purple {
+  background-color: rgba(72, 27, 104, 0.25) !important;
+}
+
+.border-purple {
+  border: 0.01rem solid $secondary-color-3 !important;
+}
+
+.text-purple {
+  color: #8b21e2 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.15rem $secondary-color-4 !important;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  background-color: #343038 !important;
+}
+
+.btn-cart {
+  button {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: $default-transition;
+    border: 0.01rem solid $primary-color-2;
+    border-radius: 15rem !important;
+  }
+
+  @include button-transition(transparent, $secondary-color-1);
+}
+
+.btn-favorite {
+  button {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: $default-transition;
+    border-radius: 15rem !important;
+  }
+
+  @include button-transition($secondary-color-4, $secondary-color-1);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 0 !important;
+}
