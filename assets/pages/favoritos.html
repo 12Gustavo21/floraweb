@@ -19,44 +19,113 @@
 
 
 <body>
-  <footer>
-      <div class="footer__content">
-        <img src="../img/logo-white.svg" alt="FloraWeb logo" draggable="false" class="footer-logo">
-        <div class="payment__methods">
-          <p>Aceitamos para pagamento:</p>
-          <img src="../img/creditcard-icon.svg" alt="Ícone de cartão de crédito" class="payment-icon">
-          <img src="../img/pix-icon.svg" alt="Ícone do Pix" class="payment-icon">
-          <img src="../img/moneys-icon.svg" alt="Ícone de dinheiro" class="payment-icon">
+  <header>
+    <div class="header__details">
+      <img src="../img/Left arrow.svg" alt="Seta para esquerda" onclick="voltarPagina()">
+      <h2>Favoritos</h2>
+    </div>
+    <figure class="header__favorite">
+      <a href="../pages/carrinho.html">
+        <img src="../img/whitecart-icon.svg" alt="Favoritos">
+      </a>
+    </figure>
+  </header>
+  <main>
+    <section class="container pb-5">
+      <div
+        class="w-100 d-flex justify-content-center align-items-center flex-wrap gap-4 aling-items-md-start justify-content-md-start">
+        <div
+          class="bouquet__card text-center py-3 position-relative gap-3 d-flex justify-content-end align-items-center flex-column">
+          <a href="#" class="position-absolute end-0 top-0 mt-3 me-3">
+            <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
+          </a>
+          <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4">
+            <img src="../img/bouquet eight.webp" alt="Buquê 1" draggable="false" class="w-100 h-100 position-relative z-1 object-fit-cover">
+          </figure>
+          <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">Buquê tamanho grande <span>“Aurora de Sonhos”</span>
+          </p>
+          <div>
+            <p class="fw-bold fs-5">R$ 349,99</p>
+            <a href="bouquet-8.html">
+            <button class="px-5 py-3 rounded-5 mt-1 overflow-hidden z-1 position-relative">Ver buquê</button>
+            </a>
+          </div>
         </div>
-        <a href="../img/pages/politica-privacidade">
-          Nossa política de privacidade
-        </a>
-        <p class="copyright">
-          &copy;<span class="year"></span>Todos os direitos reservados
-        </p>
-      </div>
-      <div class="social__media">
-        <div class="social__media__content">
-          <p>Siga-nos nas redes sociais:</p>
-          <nav>
-            <a href="#" class="social__media__link">
-              <img src="../img/instagram-icon.svg" alt="Ícone do Instagram">
+        <div
+          class="bouquet__card text-center py-3 position-relative gap-3 d-flex justify-content-end align-items-center flex-column">
+          <a href="#" class="position-absolute end-0 top-0 mt-3 me-3">
+            <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
+          </a>
+          <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4">
+            <img src="../img/bouquet seven.webp" alt="Buquê 2" draggable="false" class="w-100 h-100 position-relative z-1 object-fit-cover">
+          </figure>
+          <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">Buquê tamanho médio <span>"Campos Eternos"</span></p>
+          <div>
+            <p class="fw-bold fs-5">R$ 209,99</p>
+            <a href="bouquet-7.html">
+            <button class="px-5 py-3 rounded-5 mt-1 overflow-hidden z-1 position-relative">Ver buquê</button>
             </a>
-            <a href="" class="social__media__link">
-              <img src="../img/facebook-icon.svg" alt="Ícone do Facebook">
-            </a>
-            <a href="" class="social__media__link">
-              <img src="../img/twitter-icon.svg" alt="Ícone do Twitter">
-            </a>
-          </nav>
+          </div>
         </div>
-        <button class="contact__button">Fale conosco</button>
-      </div>
-    </footer>
+        <div
+          class="bouquet__card text-center py-3 position-relative gap-3 d-flex justify-content-end align-items-center flex-column">
+          <a href="#" class="position-absolute end-0 top-0 mt-3 me-3">
+            <img src="../img/full.heart-icon.svg" alt="Favorite icon" draggable="false">
+          </a>
+          <figure class="d-flex justify-content-center align-items-center position-absolute top-0 mt-4">
+            <img src="../img/bouquet six.webp" alt="Buquê 3" draggable="false" class="w-100 h-100 position-relative z-1 object-fit-cover">
+          </figure>
+          <p class="d-flex justify-content-center align-items-center m-0 text-center flex-column">Buquê tamanho pequeno <span>“Sol Poético”</span></p>
+          <div>
+            <p class="fw-bold fs-5">R$ 99,99</p>
+            <a href="bouquet-6.html">
+            <button class="px-5 py-3 rounded-5 mt-1 overflow-hidden z-1 position-relative">Ver buquê</button>
+            </a>
+          </div>
+        </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="footer__content">
+      <img src="../img/logo-white.svg" alt="FloraWeb logo" draggable="false" class="footer-logo">
+      <div class="payment__methods">
+        <p>Aceitamos para pagamento:</p>
+        <img src="../img/creditcard-icon.svg" alt="Ícone de cartão de crédito" class="payment-icon">
+        <img src="../img/pix-icon.svg" alt="Ícone do Pix" class="payment-icon">
+        <img src="../img/moneys-icon.svg" alt="Ícone de dinheiro" class="payment-icon">
+      </div>
+      <a href="./assets/pages/politica-privacidade">
+        Nossa política de privacidade
+      </a>
+      <p class="copyright">
+        &copy;<span class="year"></span>Todos os direitos reservados
+      </p>
+    </div>
+    <div class="social__media">
+      <div class="social__media__content">
+        <p>Siga-nos nas redes sociais:</p>
+        <nav>
+          <a href="#" class="social__media__link">
+            <img src="../img/instagram-icon.svg" alt="Ícone do Instagram">
+          </a>
+          <a href="" class="social__media__link">
+            <img src="../img/facebook-icon.svg" alt="Ícone do Facebook">
+          </a>
+          <a href="" class="social__media__link">
+            <img src="../img/twitter-icon.svg" alt="Ícone do Twitter">
+          </a>
+        </nav>
+      </div>
+      <button class="contact__button">Fale conosco</button>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
 </body>
+
+
 
 </html>
