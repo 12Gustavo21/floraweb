@@ -2,7 +2,7 @@ const header = document.querySelector(".header");
 
 var prevScrollpos = window.pageYOffset;
 
-if (document.referrer.includes("index.html")) {
+if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
   window.onscroll = function () {
     const currentScrollPos = window.pageYOffset;
     if (prevScrollpos < currentScrollPos) {
