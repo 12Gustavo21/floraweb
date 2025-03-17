@@ -2,22 +2,24 @@ const header = document.querySelector(".header");
 
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function () {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollpos < currentScrollPos) {
-    header.classList.remove("visible");
-    header.classList.add("hidden");
-  } else if (currentScrollPos === 0) {
-    header.classList.remove("visible");
-    header.classList.remove("hidden");
-  } else {
-    if (prevScrollpos > currentScrollPos) {
-      header.classList.add("visible");
+if (document.referrer.includes("index.html")) {
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos < currentScrollPos) {
+      header.classList.remove("visible");
+      header.classList.add("hidden");
+    } else if (currentScrollPos === 0) {
+      header.classList.remove("visible");
       header.classList.remove("hidden");
+    } else {
+      if (prevScrollpos > currentScrollPos) {
+        header.classList.add("visible");
+        header.classList.remove("hidden");
+      }
     }
-  }
-  prevScrollpos = currentScrollPos;
-};
+    prevScrollpos = currentScrollPos;
+  };
+}
 
 document.querySelectorAll(".group").forEach((group) => {
   const input = group.querySelector(".input");
@@ -44,6 +46,6 @@ function voltarPagina() {
   ) {
     history.back();
   } else {
-    window.location.href = "../../index.html"; 
+    window.location.href = "../../index.html";
   }
 }
